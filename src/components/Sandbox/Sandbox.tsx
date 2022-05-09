@@ -3,9 +3,13 @@ import {T} from '../T/T';
 
 
 export const Sandbox = () => {
+    const [state, setState] = React.useState<boolean>(false);
+
+     const onMouseInHandler = () => console.log("onMouseInHandler")
+
     return (
         <>
-            <div style={{display: 'flex', flexFlow: "column nowrap"}}>
+            <div style={{display: 'flex', flexFlow: "column nowrap", alignItems: "center"}}>
                 <T>
                     <h1>H1</h1>
                 </T>
@@ -19,13 +23,13 @@ export const Sandbox = () => {
                     <h4>H4</h4>
                 </T>
                 <T textType={'body-1'} fontWeight={'regular'}>
-                    <div>div</div>
+                    <div style={{background: "red"}}>div</div>
                 </T>
                 <T textType={'body-2'} fontWeight={'semiBold'}>
-                    <span>span</span>
+                    <span style={{cursor: "pointer"}} onClick={() => setState(!state)}>span</span>
                 </T>
                 <T textType={'body-3'} fontWeight={'medium'}>
-                    <a href={'#'}>link</a>
+                    <a href={'#'} onMouseOver={onMouseInHandler}>link</a>
                 </T>
             </div>
 
