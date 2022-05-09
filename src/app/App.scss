@@ -1,3 +1,13 @@
+.sandbox {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  & > * {
+    margin-bottom: 15px;
+  }
+}
+
 *,
 *::after,
 *::before {

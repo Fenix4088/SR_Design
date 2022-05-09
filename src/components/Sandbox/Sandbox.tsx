@@ -1,6 +1,9 @@
 import React from 'react';
+import '../../app/App.scss'
 import {T} from '../T/T';
 import {L} from "../L/L";
+import {Badge} from "../Badge/Badge";
+import {ReactComponent as BellIcon} from '../../icons/bell.svg'
 
 
 export const Sandbox = () => {
@@ -10,7 +13,7 @@ export const Sandbox = () => {
 
     return (
         <>
-            <div style={{display: 'flex', flexFlow: "column nowrap", alignItems: "center"}}>
+            <div className={'sandbox'}>
                 <h2>Typography</h2>
                 <T>
                     <h1>H1</h1>
@@ -33,16 +36,39 @@ export const Sandbox = () => {
                 <T textType={'body-3'} fontWeight={'medium'}>
                     <a href={'#'} onMouseOver={onMouseInHandler}>link</a>
                 </T>
-
+                <h2>Links</h2>
                 <T fontWeight={'bold'} textType={'body-1'}>
-                <span>Some text with{' '}
-                    <L>
-                        <a href="#">very long link</a>
-                    </L>
-                </span>
+                    <span>Some text with{' '}
+                        <L>
+                            <a href="#">very long link</a>
+                        </L>
+                    </span>
                 </T>
-            </div>
+                <h2>Badges</h2>
+                <Badge>
+                    <Badge.Value textContent={'333'}/>
+                </Badge>
 
+                <Badge type={'notification'}>
+                    <Badge.Icon>
+                        <BellIcon/>
+                    </Badge.Icon>
+                </Badge>
+
+                <Badge>
+                    <Badge.Icon>
+                        <BellIcon/>
+                    </Badge.Icon>
+                    <Badge.Value textContent={'333'}/>
+                </Badge>
+
+                <Badge type={'notification'}>
+                    <Badge.Value textContent={'142333'}/>
+                    <Badge.Icon>
+                        <BellIcon/>
+                    </Badge.Icon>
+                </Badge>
+            </div>
         </>
     )
 }

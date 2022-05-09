@@ -1,0 +1,69 @@
+@import "../../styles/colors";
+
+.badge {
+  padding: 8px 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none        ;
+
+  &.basic {
+    background: $Dubai;
+    transition: all .2s ease;
+
+    &:hover {
+      background: $FutureHover;
+    }
+
+    &:active {
+      background: $FuturePress;
+    }
+
+    &:focus {
+      background: $Dubai;
+      outline: $Future solid 2px;
+    }
+
+  }
+
+  &.notification {
+    background: $Birthday;
+    transition: all .2s ease;
+
+    &:hover {
+      background: $DiscoManHover;
+    }
+
+    &:active {
+      background: $DiscoManPress;
+    }
+
+    &:focus {
+      background: $Birthday;
+      outline: $Future solid 2px;
+    }
+  }
+
+  span:nth-child(2n) {
+    margin-left: 6px;
+  }
+
+  .icon {
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 11px;
+      height: 12.57px;
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .value {
+    color: #fff
+  }
+}
