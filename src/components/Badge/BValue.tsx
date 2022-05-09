@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Badge.module.scss";
+import classNames from "classnames";
 
 const numFormatter = (num: number): string => {
     if (num > 999 && num < 1000000) {
@@ -11,17 +12,19 @@ const numFormatter = (num: number): string => {
     return '' + num
 }
 
-interface BValueProps {
+interface BValueProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
     textContent: number;
 }
 
-export const BValue = React.memo(({textContent}: BValueProps) => {
+export const BValue = React.memo(({textContent, className}: BValueProps) => {
     const formatTextContent = React.useMemo(() => {
         return numFormatter(textContent)
     }, [textContent])
 
+    const elementCN = classNames(styles['value'], className)
+
     return (
-        <span className={styles['value']}>
+        <span className={elementCN}>
             {formatTextContent}
         </span>
     )
