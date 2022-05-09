@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.scss';
-import s from './Test.module.scss';
+import {T} from "../components/T/T";
 
 function App() {
     return (
         <div className="App">
-            <p className={s['hello']}>Hello Searates</p>
+
+            <T fontWeight={'bold'}>
+                <h1>Hello</h1>
+            </T>
+
         </div>
     );
 }
 
 export default App;
+

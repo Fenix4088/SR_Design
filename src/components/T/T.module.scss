@@ -1,0 +1,136 @@
+@import '../../styles/colors';
+@import '../../styles/media';
+@import '../../styles/functions';
+
+//generics
+.h1, .h2, .h3, .h4, .h5, .h6, .body-1, .body-2, .body-3, .captions, .overline {
+  color: $Dubai;
+  &.semiBold {
+    font-weight: 600;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.body-1, .body-2, .body-3, .captions, .overline {
+  &.regular {
+    font-weight: 400;
+  };
+
+  &.medium {
+    font-weight: 500;
+  }
+}
+// /generics
+
+// Headers
+.h1 {
+  font-size: cRem(54);
+  line-height: cRem(60);
+
+  @include MQ($tablet) {
+    font-size: cRem(54);
+    line-height: cRem(72);
+  }
+
+  @include MQ($desktopS) {
+    font-size: cRem(72);
+    line-height: cRem(84);
+  }
+}
+
+.h2 {
+  font-size: cRem(24);
+  line-height: cRem(34);
+
+  @include MQ($tablet) {
+    font-size: cRem(44);
+    line-height: cRem(54);
+  }
+
+  @include MQ($desktopS) {
+    font-size: cRem(48);
+    line-height: cRem(60);
+  }
+}
+
+.h3 {
+  font-size: cRem(22);
+  line-height: cRem(32);
+
+  @include MQ($tablet) {
+    font-size: cRem(32);
+    line-height: cRem(42);
+  }
+
+  @include MQ($desktopS) {
+    font-size: cRem(36);
+    line-height: cRem(46);
+  }
+}
+
+.h4 {
+  font-size: cRem(18);
+  line-height: cRem(28);
+
+  @include MQ($tablet) {
+    font-size: cRem(20);
+    line-height: cRem(30);
+  }
+}
+
+.h5 {
+  font-size: cRem(16);
+  line-height: cRem(26);
+
+  @include MQ($tablet) {
+    font-size: cRem(18);
+    line-height: cRem(28);
+  }
+}
+
+.h6 {
+  font-size: cRem(16);
+  line-height: cRem(26);
+}
+
+// /Headers
+
+//text
+.body-1 {
+  font-size: cRem(16);
+  line-height: cRem(26);
+}
+
+.body-2 {
+  font-size: cRem(14);
+  line-height: cRem(22);
+}
+
+.body-3 {
+  font-size: cRem(12);
+  line-height: cRem(20);
+}
+
+.captions {
+  font-size: cRem(10);
+  line-height: cRem(12);
+}
+
+.overline {
+  font-size: cRem(10);
+  line-height: cRem(12);
+
+  @include MQ($tablet) {
+    font-size: cRem(12);
+    line-height: cRem(20);
+  }
+
+  @include MQ($desktopS) {
+    font-size: cRem(14);
+    line-height: cRem(22);
+  }
+}
+// .text

@@ -1,0 +1,21 @@
+$desktopL: 1920px;
+$desktopM: 1440px;
+$desktopS: 1170px;
+$tablet: 768px;
+$tabletM: 600px;
+$mobileL: 480px;
+
+/*
+ @desc media query mixin @param $viewport - viewport of the screen @param $practice - MF - mobile first styles, DF - desktop first styles */
+
+@mixin MQ($viewport, $practice: MF) {
+  @if $practice == MF {
+    @media(min-width: $viewport) {
+      @content;
+    }
+  } @else if $practice == DF {
+    @media(max-width: $viewport) {
+      @content;
+    }
+  }
+}
