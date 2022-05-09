@@ -97,23 +97,23 @@ input[type='number'] {
 }
 
 :root {
-  --searatesRem: 10px;
+  --rem-base: 10px;
 }
 
 @media (max-width: 1500px) {
   :root {
-    --searatesRem: 8px;
+    --rem-base: 8px;
   }
 }
 
 @media (max-width: 900px) {
   :root {
-    --searatesRem: 7.2px;
+    --rem-base: 7.2px;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --searatesRem: 10px;
+    --rem-base: 10px;
   }
 }
