@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.scss';
-import {T} from "../components/T/T";
+import {Sandbox} from "../components/Sandbox/Sandbox";
 
 function App() {
+
     return (
         <div className="App">
-
-            <T fontWeight={'bold'}>
-                <h1>Hello</h1>
-            </T>
-
+            <Sandbox/>
         </div>
     );
 }
