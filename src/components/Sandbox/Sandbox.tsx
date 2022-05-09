@@ -1,5 +1,6 @@
 import React from 'react';
 import {T} from '../T/T';
+import {L} from "../L/L";
 
 
 export const Sandbox = () => {
@@ -31,6 +32,14 @@ export const Sandbox = () => {
                 </T>
                 <T textType={'body-3'} fontWeight={'medium'}>
                     <a href={'#'} onMouseOver={onMouseInHandler}>link</a>
+                </T>
+
+                <T fontWeight={'bold'} textType={'body-1'}>
+                <span>Some text with{' '}
+                    <L>
+                        <a href="#">very long link</a>
+                    </L>
+                </span>
                 </T>
             </div>
 

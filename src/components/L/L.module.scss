@@ -2,15 +2,15 @@
 @import '../../styles/functions';
 
 .link {
+  position: relative;
   color: $Dubai;
   font-size: cRem(16);
   line-height: cRem(26);
   font-weight: 500;
   text-decoration: underline;
-  border: 2px solid transparent;
 
   &:focus {
-    border: 2px solid $Future;
+    outline: $Future solid 2px;
     border-radius: 6px;
   }
 }
