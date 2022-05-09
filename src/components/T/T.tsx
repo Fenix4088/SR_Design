@@ -65,6 +65,10 @@ export const T: TOverload = ({fontWeight = 'bold', textType, children: child}: a
         throw new Error(`You could not use h1-h6 tags with 'textType: ${textType}' property`)
     }
 
+    if(!child.type.match(/^h\d$/i) && !textType) {
+        console.warn(`Child: ${child.type} in Typography component is useless without 'textType' property`)
+    }
+
     const {className, ...restProps} = child.props;
 
     return React.cloneElement(child, {

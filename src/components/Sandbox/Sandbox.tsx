@@ -10,6 +10,7 @@ export const Sandbox = () => {
     return (
         <>
             <div style={{display: 'flex', flexFlow: "column nowrap", alignItems: "center"}}>
+                <h2>Typography</h2>
                 <T>
                     <h1>H1</h1>
                 </T>
