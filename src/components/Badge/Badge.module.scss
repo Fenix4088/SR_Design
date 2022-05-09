@@ -7,7 +7,7 @@
   align-items: center;
   border-radius: 20px;
   cursor: pointer;
-  border: none        ;
+  border: none;
 
   &.basic {
     background: $Dubai;
@@ -29,11 +29,21 @@
   }
 
   &.notification {
+    position: relative;
     background: $Birthday;
     transition: all .2s ease;
+    overflow: hidden;
 
-    &:hover {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: 100%;
+      height: 100%;
       background: $DiscoManHover;
+      transition: all .2s ease;
+      z-index: 1;
     }
 
     &:active {
@@ -51,6 +61,8 @@
   }
 
   .icon {
+    position: relative;
+    z-index: 2;
     svg {
       display: flex;
       justify-content: center;
@@ -64,6 +76,14 @@
   }
 
   .value {
+    position: relative;
+    z-index: 2;
     color: #fff
+  }
+}
+
+.badge.notification:hover {
+  &:before {
+    left: 0
   }
 }

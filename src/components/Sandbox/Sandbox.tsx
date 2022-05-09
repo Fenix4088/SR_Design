@@ -4,6 +4,7 @@ import {T} from '../T/T';
 import {L} from "../L/L";
 import {Badge} from "../Badge/Badge";
 import {ReactComponent as BellIcon} from '../../icons/bell.svg'
+import {ReactComponent as RandomIcon} from '../../icons/random.svg'
 
 
 export const Sandbox = () => {
@@ -51,7 +52,7 @@ export const Sandbox = () => {
 
                 <Badge badgeType={'notification'}>
                     <Badge.Icon>
-                        <BellIcon/>
+                        <RandomIcon/>
                     </Badge.Icon>
                 </Badge>
 
