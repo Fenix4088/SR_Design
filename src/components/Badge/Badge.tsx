@@ -1,22 +1,30 @@
-import React from 'react';
+import React  from 'react';
 import styles from './Badge.module.scss'
 import classNames from "classnames";
 import {BValue} from "./BValue";
 import {BIcon} from "./BIcon";
 
-interface BadgeProps {
+interface BadgeProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     children: JSX.Element | JSX.Element[]
-    isDisabled?: false
-    type?: 'basic' | 'notification'
+    badgeType?: 'basic' | 'notification'
 }
 
-export const Badge = ({children, type = 'basic', isDisabled}: BadgeProps) => {
-    const badgeCN = classNames(styles['badge'], styles[`${type}`])
+
+const BadgeBase = React.memo(({children, badgeType = 'basic', className, ...props}: BadgeProps) => {
+    const badgeCN = classNames(styles['badge'], styles[`${badgeType}`], className)
     return (
-        <button className={badgeCN} disabled={isDisabled}>{children}</button>
+        <button {...props} className={badgeCN}>{children}</button>
     )
+})
+
+type TBadge = typeof BadgeBase & {
+    Icon: typeof BIcon,
+    Value: typeof BValue
 }
+
+export const Badge = BadgeBase as TBadge
 
 
 Badge.Icon = BIcon
 Badge.Value = BValue
+

@@ -12,16 +12,12 @@ const numFormatter = (num: number): string => {
 }
 
 interface BValueProps {
-    textContent: `${number}`;
+    textContent: number;
 }
 
 export const BValue = React.memo(({textContent}: BValueProps) => {
     const formatTextContent = React.useMemo(() => {
-        if (isNaN(+textContent)) return textContent;
-
-        const int = parseInt(textContent, 10);
-
-        return numFormatter(int)
+        return numFormatter(textContent)
     }, [textContent])
 
     return (

@@ -46,10 +46,10 @@ export const Sandbox = () => {
                 </T>
                 <h2>Badges</h2>
                 <Badge>
-                    <Badge.Value textContent={'333'}/>
+                    <Badge.Value textContent={333}/>
                 </Badge>
 
-                <Badge type={'notification'}>
+                <Badge badgeType={'notification'}>
                     <Badge.Icon>
                         <BellIcon/>
                     </Badge.Icon>
@@ -59,11 +59,11 @@ export const Sandbox = () => {
                     <Badge.Icon>
                         <BellIcon/>
                     </Badge.Icon>
-                    <Badge.Value textContent={'333'}/>
+                    <Badge.Value textContent={333}/>
                 </Badge>
 
-                <Badge type={'notification'}>
-                    <Badge.Value textContent={'142333'}/>
+                <Badge badgeType={'notification'}>
+                    <Badge.Value textContent={14233}/>
                     <Badge.Icon>
                         <BellIcon/>
                     </Badge.Icon>
