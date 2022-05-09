@@ -95,3 +95,25 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+:root {
+  --searatesRem: 10px;
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --searatesRem: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --searatesRem: 7.2px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --searatesRem: 10px;
+  }
+}
