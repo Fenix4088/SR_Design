@@ -72,7 +72,8 @@ export const Sandbox = () => {
                 </Badge>
                 <h2>Avatar</h2>
                 <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'}/>
-                <Avatar type={'logo'} size={'middle'}/>
+                <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'}/>
+                <Avatar type={'logo'}/>
             </div>
         </>
     )

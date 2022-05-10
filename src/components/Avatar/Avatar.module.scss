@@ -3,13 +3,18 @@
 @import '../../styles/mixins';
 
 .avatar {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
   &.logo {
-    border: 1px dashed red;
+    border: 1px dashed $Storm;
+
     &.huge, &.large, &.middle, &.small, &.super-small, &.tiny {
       .name {
-        color: red;
-        font-size: 14px;
+        color: $Storm;
+        font-size: cRem(14);
+        font-weight: 500;
       }
     }
   }
@@ -17,6 +22,7 @@
   &.huge, &.large, &.middle, &.small, &.super-small, &.tiny {
     border-radius: 50%;
     @include flex(center, center);
+
     .name {
       font-weight: 600;
       color: #fff;
@@ -26,14 +32,63 @@
   &.huge {
     width: cRem(120);
     height: cRem(120);
+
     .name {
       font-size: cRem(50);
+    }
+
+    .control-panel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -200px;
+      left: 0;
+      background: $DubaiO0_3;
+      transition: all .4s ease;
+
+      .control-btn-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: -300%;
+        transform: translate(-50%, -50%);
+        transition: all .4s ease .4s;
+        @include flex(space-evenly, center);
+
+        .add-btn, .remove-btn {
+          width: 38px;
+          height: 38px;
+          background: $DubaiO0_5;
+          border-radius: 50%;
+          @include flex(center, center);
+        }
+
+        .add-btn {
+        }
+
+        .remove-btn {
+        }
+      }
+
+
+    }
+
+    &:hover {
+      .control-panel {
+        top: 0;
+
+        .control-btn-wrapper {
+          //width: 58%;
+          left: 50%
+        }
+      }
     }
   }
 
   &.large {
     width: cRem(64);
     height: cRem(64);
+
     .name {
       font-size: cRem(28);
     }
@@ -42,6 +97,7 @@
   &.middle {
     width: cRem(56);
     height: cRem(56);
+
     .name {
       font-size: cRem(28);
     }
@@ -50,6 +106,7 @@
   &.small {
     width: cRem(40);
     height: cRem(40);
+
     .name {
       font-size: cRem(18);
     }
@@ -58,6 +115,7 @@
   &.super-small {
     width: cRem(32);
     height: cRem(32);
+
     .name {
       font-size: cRem(16);
     }
@@ -66,6 +124,7 @@
   &.tiny {
     width: cRem(24);
     height: cRem(24);
+
     .name {
       font-size: cRem(12);
     }
