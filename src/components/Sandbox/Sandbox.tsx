@@ -77,6 +77,7 @@ export const Sandbox = () => {
                     </Badge.Icon>
                 </Badge>
                 <h2>Avatar</h2>
+                <div>Hello</div>
                 <input ref={ref} type="file" />
                 <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'} />
                 <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'}/>
