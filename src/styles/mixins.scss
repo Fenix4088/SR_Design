@@ -1,0 +1,18 @@
+@mixin flex($JC: null, $AI: null, $FF: null) {
+  display: flex;
+  @if ($JC == null) {
+    justify-content: flex-start;
+  } @else {
+    justify-content: $JC;
+  }
+  @if ($AI == null) {
+    align-items: flex-start;
+  } @else {
+    align-items: $AI;
+  }
+  @if ($FF == null) {
+    flex-flow: row nowrap;
+  } @else {
+    flex-flow: $FF;
+  }
+}

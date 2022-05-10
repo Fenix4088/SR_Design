@@ -5,6 +5,7 @@ import {L} from "../L/L";
 import {Badge} from "../Badge/Badge";
 import {ReactComponent as BellIcon} from '../../icons/bell.svg'
 import {ReactComponent as RandomIcon} from '../../icons/random.svg'
+import {Avatar} from "../Avatar/Avatar";
 
 
 export const Sandbox = () => {
@@ -69,6 +70,8 @@ export const Sandbox = () => {
                         <BellIcon/>
                     </Badge.Icon>
                 </Badge>
+                <h2>Avatar</h2>
+                <Avatar />
             </div>
         </>
     )

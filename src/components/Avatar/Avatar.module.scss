@@ -1,0 +1,85 @@
+@import '../../styles/functions';
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+@function unite($list, $glue: ", ") {
+  @if length($list) == 1 {
+    @return $list;
+  } @else {
+    $string: "";
+    @each $item in $list {
+      @if $string != "" { $string: $string + $glue; }
+      $string: $string + $item;
+    }
+
+    @return $string;
+  }
+}
+
+.avatar {
+
+  &.huge, &.large, &.middle, &.small, &.supersmall, &.tiny {
+    border-radius: 50%;
+    @include flex(center, center);
+    .name {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  &.huge {
+    width: cRem(120);
+    height: cRem(120);
+    background: $NewYear;
+    .name {
+      font-size: cRem(50);
+    }
+  }
+
+  &.large {
+    width: cRem(64);
+    height: cRem(64);
+    background: $Birthday;
+    .name {
+      font-size: cRem(28);
+    }
+  }
+
+  &.middle {
+    width: cRem(56);
+    height: cRem(56);
+    background: $Extrovert;
+    .name {
+      font-size: cRem(28);
+    }
+  }
+
+  &.small {
+    width: cRem(40);
+    height: cRem(40);
+    background: $Introvert;
+    .name {
+      font-size: cRem(18);
+    }
+  }
+
+  &.supersmall {
+    width: cRem(32);
+    height: cRem(32);
+    background: $Extrovert;
+    .name {
+      font-size: cRem(16);
+    }
+  }
+
+  &.tiny {
+    width: cRem(24);
+    height: cRem(24);
+    background: $NewYear;
+    .name {
+      font-size: cRem(12);
+    }
+  }
+
+}
+
