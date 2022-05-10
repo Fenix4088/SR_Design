@@ -11,7 +11,7 @@ import {Avatar} from "../Avatar/Avatar";
 export const Sandbox = () => {
     const [state, setState] = React.useState<boolean>(false);
 
-     const onMouseInHandler = () => console.log("onMouseInHandler")
+    const onMouseInHandler = () => console.log("onMouseInHandler")
 
     return (
         <>
@@ -71,7 +71,8 @@ export const Sandbox = () => {
                     </Badge.Icon>
                 </Badge>
                 <h2>Avatar</h2>
-                <Avatar />
+                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'}/>
+                <Avatar type={'logo'} size={'middle'}/>
             </div>
         </>
     )

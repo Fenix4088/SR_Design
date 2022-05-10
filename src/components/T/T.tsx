@@ -1,22 +1,26 @@
 import React from "react";
 import styles from './T.module.scss';
 import classNames from "classnames";
+import {PickFromType} from "../../types/generics";
 
 type TStyles = {
     [K in string]: string;
 }
+
+type TextType = 'body-1' | 'body-2' | 'body-3' | 'captions' | 'overline';
+type FontWeight = 'regular' | 'medium' | 'bold' | 'semiBold';
 
 interface TProps {
     children: JSX.Element
 }
 
 interface Headers extends TProps {
-    fontWeight?: 'bold' | 'semiBold'
+    fontWeight?: PickFromType<FontWeight, 'bold' | 'semiBold'>
 }
 
 interface SimpleText extends TProps {
-    textType: 'body-1' | 'body-2' | 'body-3' | 'captions' | 'overline'
-    fontWeight: 'regular' | 'medium' | 'bold' | 'semiBold'
+    textType: TextType
+    fontWeight: FontWeight
 }
 
 interface TOverload {
@@ -39,7 +43,7 @@ const componentStyles: TStyles = {
     overline: styles['overline']
 }
 
-export const getElementType = (elementType: string, textType: 'body-1' | 'body-2' | 'body-3' | 'captions' | 'overline'): string => {
+export const getElementType = (elementType: string, textType: TextType): string => {
     switch (elementType) {
         case 'h1':
         case 'h2':

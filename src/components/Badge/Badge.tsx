@@ -16,7 +16,7 @@ interface BadgeProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<
 }
 
 const BadgeBase = React.memo(({children, badgeType = 'basic', className, ...props}: BadgeProps) => {
-    const badgeCN = classNames(styles['badge'], styles[`${badgeType}`], className)
+    const badgeCN = classNames(styles['badge'], styles[badgeType], className)
     return (
         <button {...props} className={badgeCN}>{children}</button>
     )
