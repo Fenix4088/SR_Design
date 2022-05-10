@@ -34,17 +34,17 @@ export const Avatar: Overload = ({size, color, type, className, userName, onAdd,
     const avatarCN = classNames(styles['avatar'], styles[size], styles[color], className);
     const logoCN = classNames(styles['avatar'], styles['logo'], styles['huge'], className);
 
-    const isLogoType = type === 'logo' && true;
+    const isLogoType = type === 'logo';
     const currentCN = isLogoType ? logoCN : avatarCN;
     const userNameFirstLetter = userName ? userName.trim().charAt(0).toUpperCase() : null;
     const userNameNodeContent = isLogoType ? 'Add logo' : userNameFirstLetter;
     const isControlPanelVisible = isLogoType || size === 'huge';
 
     const onAddHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
-        onAdd(e)
+        onAdd?.(e)
     }
     const onRemoveHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
-        onRemove(e)
+        onRemove?.(e)
     }
 
     //TODO: Maby should create a component for the control panel?

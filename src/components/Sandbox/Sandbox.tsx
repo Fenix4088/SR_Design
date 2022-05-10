@@ -11,7 +11,13 @@ import {Avatar} from "../Avatar/Avatar";
 export const Sandbox = () => {
     const [state, setState] = React.useState<boolean>(false);
 
+    const ref = React.useRef<any>(null);
+
     const onMouseInHandler = () => console.log("onMouseInHandler")
+
+    const onCHangeHandler = (e: any):void => {
+        console.log(e.currentTarget.value);
+    }
 
     return (
         <>
@@ -71,7 +77,8 @@ export const Sandbox = () => {
                     </Badge.Icon>
                 </Badge>
                 <h2>Avatar</h2>
-                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'}/>
+                <input ref={ref} type="file" />
+                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'} />
                 <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'}/>
                 <Avatar type={'logo'}/>
             </div>
