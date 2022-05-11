@@ -21,7 +21,7 @@ interface UseFormatAvatarGroupChildrenReturnType {
 }
 
 export const spliceAvatarsToIndex = (avatars: [JSX.Element[], number]): JSX.Element[] => {
-  if(avatars[0].length <= avatars[1]) return avatars[0];
+  if (avatars[0].length <= avatars[1]) return avatars[0];
   return avatars[0].slice(0, avatars[1]);
 };
 
@@ -47,10 +47,6 @@ export const useFormatAvatarGroupChildren = (
 ): UseFormatAvatarGroupChildrenReturnType => {
   const restCount = avatars.length - maxDisplayedLength;
 
-  // const testAvatar = spliceAvatarsToIndex(avatars, maxDisplayedLength);
-  //
-  // const testAvatar2 = applyZIndex(testAvatar);
-
   const formatedAvatars = compose<[typeof spliceAvatarsToIndex, typeof applyZIndex], [JSX.Element[], number]>(
     spliceAvatarsToIndex,
     applyZIndex
@@ -67,8 +63,6 @@ export const isSomeChildIsNotAvatar = (avatars: JSX.Element[]): boolean =>
 
 export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGroupProps) => {
   const avatarCountCN = classNames(styles['avatar-count'], styles[size]);
-
-
 
   const avatars = children({ type: 'avatar', size });
   const avatarGroupChildren: JSX.Element[] = avatars.props.children;
