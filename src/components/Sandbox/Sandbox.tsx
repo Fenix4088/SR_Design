@@ -164,22 +164,6 @@ export const Sandbox = () => {
               <>
                 <Avatar {...avatarParams} src={testUrl} userName={'Anton Milifanov'} color={'introvert'} />
                 <Avatar {...avatarParams} src={''} userName={'Sam'} color={'extrovert'} />
-                <Avatar {...avatarParams} src={testUrl2} userName={'Bill'} color={'birthday'} />
-                <Avatar {...avatarParams} src={''} userName={'Robert'} color={'new-year'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
-                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
               </>
           )}
         </AvatarGroup>
