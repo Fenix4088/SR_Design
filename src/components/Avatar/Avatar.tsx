@@ -48,6 +48,7 @@ type Overload = {
 //TODO: handle src props for image
 export const Avatar: Overload = ({
   size,
+  src,
   isOnline = false,
   color,
   type,
@@ -75,6 +76,12 @@ export const Avatar: Overload = ({
     onRemove?.(e);
   };
 
+  const avatarContent = src ? (
+    <img className={styles['image']} src={src} alt="Avatar" />
+  ) : (
+    <div className={styles['name']}>{userNameNodeContent}</div>
+  );
+
   //TODO: Maybe should create a component for the control panel?
   const controlPanel = isControlPanelVisible ? (
     <div className={styles['control-panel']}>
@@ -83,9 +90,11 @@ export const Avatar: Overload = ({
           <input {...fileInputHtmlProps} value={value} type="file" onChange={onAddHandler} />
           <CameraIcon />
         </label>
-        <span className={styles['remove-btn']} onClick={onRemoveHandler}>
-          <TrashIcon />
-        </span>
+        {src && (
+          <span className={styles['remove-btn']} onClick={onRemoveHandler}>
+            <TrashIcon />
+          </span>
+        )}
       </div>
     </div>
   ) : null;
@@ -94,7 +103,7 @@ export const Avatar: Overload = ({
     <div className={styles['wrapper']}>
       <div {...props} className={currentCN}>
         {controlPanel}
-        <div className={styles['name']}>{userNameNodeContent}</div>
+        {avatarContent}
       </div>
       {isOnline && <div className={styles['online-indicator']} />}
     </div>

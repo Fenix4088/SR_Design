@@ -6,7 +6,11 @@ import { Badge } from '../Badge/Badge';
 import { ReactComponent as BellIcon } from '../../icons/bell.svg';
 import { ReactComponent as RandomIcon } from '../../icons/random.svg';
 import { Avatar } from '../Avatar/Avatar';
-import { log } from 'util';
+
+const testUrl =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFcT0Yq1YuK-VL5ccFmjUcNov2TcTClJT4m_b3k5DD42JuZmsaFPU8PqhRUpNSHf8vRo&usqp=CAU';
+const testUrl2 = 'https://i.pinimg.com/736x/b6/0f/05/b60f05425a8191b70f3dea5a0ba893c7.jpg';
+const testUrl3 = 'https://www.meme-arsenal.com/memes/100773de10bd652a2366e129c5053a0a.jpg';
 
 export const Sandbox = () => {
   const [state, setState] = React.useState<boolean>(false);
@@ -62,20 +66,17 @@ export const Sandbox = () => {
         <Badge>
           <Badge.Value textContent={333} />
         </Badge>
-
         <Badge badgeType={'notification'}>
           <Badge.Icon>
             <RandomIcon />
           </Badge.Icon>
         </Badge>
-
         <Badge>
           <Badge.Icon>
             <BellIcon />
           </Badge.Icon>
           <Badge.Value textContent={333} />
         </Badge>
-
         <Badge badgeType={'notification'}>
           <Badge.Value textContent={14233} />
           <Badge.Icon>
@@ -83,9 +84,8 @@ export const Sandbox = () => {
           </Badge.Icon>
         </Badge>
         <h2>Avatar</h2>
-
         <Avatar
-          src={''}
+          src={testUrl}
           isOnline
           userName={'Billy Milligan'}
           type={'avatar'}
@@ -98,13 +98,20 @@ export const Sandbox = () => {
             setFiles([]);
           }}
         />
-
         <Avatar src={''} userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
-
-        <Avatar src={''} userName={'Dima Makeev'} type={'avatar'} size={'tiny'} color={'extrovert'} />
-
+        <Avatar src={testUrl3} userName={'Dima Makeev'} type={'avatar'} size={'tiny'} color={'extrovert'} />
         <Avatar
           src={''}
+          type={'logo'}
+          onAdd={(e, files) => {
+            setFiles(files);
+          }}
+          onRemove={() => {
+            setFiles([]);
+          }}
+        />
+        <Avatar
+          src={testUrl2}
           type={'logo'}
           onAdd={(e, files) => {
             setFiles(files);

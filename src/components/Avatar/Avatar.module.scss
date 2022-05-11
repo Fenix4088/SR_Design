@@ -24,6 +24,10 @@
   overflow: hidden;
   cursor: pointer;
 
+  .image {
+    object-fit: fill;
+  }
+
   &.logo {
     border: 1px dashed $Storm;
 
