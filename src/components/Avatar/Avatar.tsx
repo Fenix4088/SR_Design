@@ -45,7 +45,6 @@ type Overload = {
   (props: LogoProps): JSX.Element;
 };
 
-//TODO: handle src props for image
 export const Avatar: Overload = ({
   size,
   src,
@@ -82,7 +81,6 @@ export const Avatar: Overload = ({
     <div className={styles['name']}>{userNameNodeContent}</div>
   );
 
-  //TODO: Maybe should create a component for the control panel?
   const controlPanel = isControlPanelVisible ? (
     <div className={styles['control-panel']}>
       <div className={styles['control-btn-wrapper']}>
