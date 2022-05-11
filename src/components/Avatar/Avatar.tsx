@@ -48,6 +48,7 @@ export const Avatar: Overload = ({size, color, type, className, userName, onAdd,
         onRemove?.(e)
     }
 
+
     //TODO: Maby should create a component for the control panel?
     const controlPanel = isControlPanelVisible ? <div className={styles['control-panel']}>
         <div className={styles['control-btn-wrapper']}>

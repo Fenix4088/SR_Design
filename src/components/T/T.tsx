@@ -2,6 +2,7 @@ import React from "react";
 import styles from './T.module.scss';
 import classNames from "classnames";
 import {PickFromType} from "../../types/generics";
+import {warning} from "../../utils/helpers";
 
 type TStyles = {
     [K in string]: string;
@@ -70,7 +71,7 @@ export const T: TOverload = ({fontWeight = 'bold', textType, children: child}: a
     }
 
     if(!child.type.match(/^h\d$/i) && !textType) {
-        console.warn(`Child: ${child.type} in Typography component is useless without 'textType' property`)
+        warning(`'Child: ${child.type}' in Typography component is useless without 'textType' property`)
     }
 
     const {className, ...restProps} = child.props;
