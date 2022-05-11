@@ -8,35 +8,30 @@ type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';
 type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
 
 
-interface AvatarBase extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> {
+type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> & {
     src: string;
-    // value?: File[];
-    // onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
-    // onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-    // fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
-interface AvatarProps extends AvatarBase {
+type AvatarControls = {
+    value?: File[];
+    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
+    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
+}
+
+type AvatarProps = AvatarBase & {
     type: 'avatar'
     color: Color
     userName: string;
     size: Size
 }
 
-interface HugeAvatarProps extends Omit<AvatarProps, 'size'> {
+type HugeAvatarProps = Omit<AvatarProps, 'size'> & AvatarControls & {
     size: 'huge'
-    value?: File[];
-    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
-    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
-interface LogoProps extends AvatarBase {
+type LogoProps = AvatarBase & AvatarControls & {
     type: 'logo'
-    value?: File[];
-    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
-    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
 type Overload = {
@@ -45,7 +40,19 @@ type Overload = {
     (props: LogoProps): JSX.Element;
 }
 
-export const Avatar: Overload = ({size, color, type, className, userName, onAdd, onRemove, value, fileInputHtmlProps, ...props}: any) => {
+//TODO: add src props to image
+export const Avatar: Overload = ({
+                                     size,
+                                     color,
+                                     type,
+                                     className,
+                                     userName,
+                                     onAdd,
+                                     onRemove,
+                                     value,
+                                     fileInputHtmlProps,
+                                     ...props
+                                 }: any) => {
 
     const avatarCN = classNames(styles['avatar'], styles[size], styles[color], className);
     const logoCN = classNames(styles['avatar'], styles['logo'], styles['huge'], className);
@@ -67,7 +74,7 @@ export const Avatar: Overload = ({size, color, type, className, userName, onAdd,
     //TODO: Maby should create a component for the control panel?
     const controlPanel = isControlPanelVisible ? <div className={styles['control-panel']}>
         <div className={styles['control-btn-wrapper']}>
-            <label className={styles['add-btn']} >
+            <label className={styles['add-btn']}>
                 <input {...fileInputHtmlProps} value={value} type="file" onChange={onAddHandler}/>
                 <CameraIcon/>
             </label>

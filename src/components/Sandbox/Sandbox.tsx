@@ -89,6 +89,8 @@ export const Sandbox = () => {
 
                 <Avatar src={''} userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
 
+                <Avatar src={''} userName={'Dima Makeev'} type={'avatar'} size={'tiny'} color={'extrovert'}/>
+
                 <Avatar src={''} type={'logo'} onAdd={(e, files) => {
                     setFiles(files)
                 }} onRemove={() => {
