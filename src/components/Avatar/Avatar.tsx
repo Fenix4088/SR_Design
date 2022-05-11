@@ -15,20 +15,20 @@ interface AvatarBase extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<H
     fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
-interface IAvatar extends AvatarBase {
+interface AvatarProps extends AvatarBase {
     type: 'avatar'
     color: Color
     userName: string;
     size: Size
 }
 
-interface Logo extends AvatarBase {
+interface LogoProps extends AvatarBase {
     type: 'logo'
 }
 
 type Overload = {
-    (props: IAvatar): JSX.Element;
-    (props: Logo): JSX.Element;
+    (props: AvatarProps): JSX.Element;
+    (props: LogoProps): JSX.Element;
 }
 
 export const Avatar: Overload = ({size, color, type, className, userName, onAdd, onRemove, value, fileInputHtmlProps, ...props}: any) => {
