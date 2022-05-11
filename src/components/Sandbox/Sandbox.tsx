@@ -6,6 +6,7 @@ import { Badge } from '../Badge/Badge';
 import { ReactComponent as BellIcon } from '../../icons/bell.svg';
 import { ReactComponent as RandomIcon } from '../../icons/random.svg';
 import { Avatar } from '../Avatar/Avatar';
+import { AvatarGroup } from '../Avatar/AvatarGroup/AvatarGroup';
 
 const testUrl =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFcT0Yq1YuK-VL5ccFmjUcNov2TcTClJT4m_b3k5DD42JuZmsaFPU8PqhRUpNSHf8vRo&usqp=CAU';
@@ -120,6 +121,20 @@ export const Sandbox = () => {
             setFiles([]);
           }}
         />
+
+        <h2>Avatars group</h2>
+
+        <AvatarGroup type={'avatar'} size={'tiny'}>
+          {(avatarParams) => (
+            <>
+              <Avatar {...avatarParams} src={''} userName={'Anton Milifanov'} color={'introvert'} />
+              <Avatar {...avatarParams} src={''} userName={'Sam'} color={'extrovert'} />
+              <Avatar {...avatarParams} src={''} userName={'Bill'} color={'birthday'} />
+              <Avatar {...avatarParams} src={''} userName={'Robert'} color={'new-year'} />
+              <Avatar {...avatarParams} src={''} userName={'Clara'} color={'introvert'} />
+            </>
+          )}
+        </AvatarGroup>
       </div>
     </>
   );

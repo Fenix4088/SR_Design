@@ -107,3 +107,5 @@ export const Avatar: Overload = ({
     </div>
   );
 };
+
+(Avatar as React.FC).displayName = 'Avatar'
