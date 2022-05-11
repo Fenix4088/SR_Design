@@ -8,12 +8,12 @@ interface AvatarGroupReturnParams {
   size: 'small' | 'super-small' | 'tiny';
 }
 
-interface AvatarGroupProps extends AvatarGroupReturnParams {
+interface AvatarGroupProps extends Omit<AvatarGroupReturnParams, 'type'> {
   children: (avatarParams: AvatarGroupReturnParams) => ReactElement;
 }
 
-export const AvatarGroup = ({ type, size, children }: AvatarGroupProps) => {
-  const avatars = children({ type, size });
+export const AvatarGroup = ({ size, children }: AvatarGroupProps) => {
+  const avatars = children({ type: 'avatar', size });
 
   if (avatars.props.children.some((avatar: JSX.Element) => avatar.type.displayName !== AvatarName)) {
     warning('AvatarGroup should contain just Avatar components');

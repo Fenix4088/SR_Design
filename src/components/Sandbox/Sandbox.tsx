@@ -124,15 +124,41 @@ export const Sandbox = () => {
 
         <h2>Avatars group</h2>
 
-        <AvatarGroup type={'avatar'} size={'tiny'}>
+        <AvatarGroup size={'tiny'}>
           {(avatarParams) => (
             <>
-              <Avatar {...avatarParams} src={''} userName={'Anton Milifanov'} color={'introvert'} />
+              <Avatar {...avatarParams} src={testUrl} userName={'Anton Milifanov'} color={'introvert'} />
               <Avatar {...avatarParams} src={''} userName={'Sam'} color={'extrovert'} />
-              <Avatar {...avatarParams} src={''} userName={'Bill'} color={'birthday'} />
+              <Avatar {...avatarParams} src={testUrl2} userName={'Bill'} color={'birthday'} />
               <Avatar {...avatarParams} src={''} userName={'Robert'} color={'new-year'} />
-              <Avatar {...avatarParams} src={''} userName={'Clara'} color={'introvert'} />
+              <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
             </>
+          )}
+        </AvatarGroup>
+
+        <AvatarGroup size={'super-small'}>
+          {(avatarParams) => (
+              <>
+                <Avatar {...avatarParams} src={testUrl} userName={'Anton Milifanov'} color={'introvert'} />
+                <Avatar {...avatarParams} src={''} userName={'Sam'} color={'extrovert'} />
+                <Avatar {...avatarParams} src={testUrl2} userName={'Bill'} color={'birthday'} />
+                <Avatar {...avatarParams} src={''} userName={'Robert'} color={'new-year'} />
+                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
+              </>
+          )}
+        </AvatarGroup>
+
+
+
+        <AvatarGroup size={'small'}>
+          {(avatarParams) => (
+              <>
+                <Avatar {...avatarParams} src={testUrl} userName={'Anton Milifanov'} color={'introvert'} />
+                <Avatar {...avatarParams} src={''} userName={'Sam'} color={'extrovert'} />
+                <Avatar {...avatarParams} src={testUrl2} userName={'Bill'} color={'birthday'} />
+                <Avatar {...avatarParams} src={''} userName={'Robert'} color={'new-year'} />
+                <Avatar {...avatarParams} src={testUrl3} userName={'Clara'} color={'introvert'} />
+              </>
           )}
         </AvatarGroup>
       </div>
