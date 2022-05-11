@@ -17,7 +17,7 @@ export const Sandbox = () => {
 
     const onMouseInHandler = () => console.log("onMouseInHandler")
 
-    const onCHangeHandler = (e: any):void => {
+    const onCHangeHandler = (e: any): void => {
         console.log(e.currentTarget.value);
     }
 
@@ -80,13 +80,20 @@ export const Sandbox = () => {
                 </Badge>
                 <h2>Avatar</h2>
 
-                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'} onAdd={(e, files) => {
+                <Avatar src={''} userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'}
+                        onAdd={(e, files) => {
+                            setFiles(files)
+                        }} onRemove={() => {
+                    setFiles([])
+                }}/>
+
+                <Avatar src={''} userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
+
+                <Avatar src={''} type={'logo'} onAdd={(e, files) => {
                     setFiles(files)
                 }} onRemove={() => {
                     setFiles([])
                 }}/>
-                <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
-                <Avatar type={'logo'}/>
             </div>
         </>
     )

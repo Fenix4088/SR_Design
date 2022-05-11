@@ -9,10 +9,11 @@ type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
 
 
 interface AvatarBase extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> {
-    value?: File[];
-    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
-    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
+    src: string;
+    // value?: File[];
+    // onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
+    // onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    // fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
 interface AvatarProps extends AvatarBase {
@@ -22,11 +23,24 @@ interface AvatarProps extends AvatarBase {
     size: Size
 }
 
+interface HugeAvatarProps extends Omit<AvatarProps, 'size'> {
+    size: 'huge'
+    value?: File[];
+    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
+    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
+}
+
 interface LogoProps extends AvatarBase {
     type: 'logo'
+    value?: File[];
+    onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
+    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
 type Overload = {
+    (props: HugeAvatarProps): JSX.Element;
     (props: AvatarProps): JSX.Element;
     (props: LogoProps): JSX.Element;
 }
