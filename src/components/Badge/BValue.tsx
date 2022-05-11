@@ -13,9 +13,11 @@ const numFormatter = (num: number): string => {
 };
 
 interface BValueProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
+  //TODO: rename => value
   textContent: number;
 }
 
+//TODO: remove memo
 export const BValue = React.memo(({ textContent, className }: BValueProps) => {
   const formatTextContent = React.useMemo(() => {
     return numFormatter(textContent);

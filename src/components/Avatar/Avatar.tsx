@@ -44,6 +44,8 @@ type Overload = {
   (props: HugeAvatarProps): JSX.Element;
   (props: AvatarProps): JSX.Element;
   (props: LogoProps): JSX.Element;
+  displayName?: string
+  componentName: 'Avatar'
 };
 
 export const Avatar: Overload = ({
@@ -73,9 +75,11 @@ export const Avatar: Overload = ({
   const isControlPanelVisible = isLogoType || size === 'huge';
 
   const onAddHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    //TODO: make method required
     onAdd?.(e, e.currentTarget.files);
   };
   const onRemoveHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
+    //TODO: make method required
     onRemove?.(e);
   };
 
@@ -112,6 +116,7 @@ export const Avatar: Overload = ({
   );
 };
 
-(Avatar as React.FC).displayName = 'Avatar';
+Avatar.displayName = 'Avatar';
+Avatar.componentName = 'Avatar';
 
-export const AvatarName = (Avatar as React.FC).displayName;
+export const AvatarName = Avatar.componentName;

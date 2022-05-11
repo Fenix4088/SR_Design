@@ -14,6 +14,7 @@ interface BadgeProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<
   badgeType?: 'basic' | 'notification';
 }
 
+//TODO: remove memoization
 const BadgeBase = React.memo(({ children, badgeType = 'basic', className, ...props }: BadgeProps) => {
   const badgeCN = classNames(styles['badge'], styles[badgeType], className);
   return (

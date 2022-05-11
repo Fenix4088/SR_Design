@@ -34,7 +34,7 @@ export const applyZIndex = (avatars: JSX.Element[]): JSX.Element[] => {
       props: {
         ...avatar.props,
         wrapperStyles: {
-          zIndex: zIndex,
+          zIndex,
         },
       },
     };
@@ -47,18 +47,20 @@ export const useFormatAvatarGroupChildren = (
 ): UseFormatAvatarGroupChildrenReturnType => {
   const restCount = avatars.length - maxDisplayedLength;
 
-  const formatedAvatars = compose<[typeof spliceAvatarsToIndex, typeof applyZIndex], [JSX.Element[], number]>(
+  const formattedAvatars = compose<[typeof spliceAvatarsToIndex, typeof applyZIndex], [JSX.Element[], number]>(
     spliceAvatarsToIndex,
     applyZIndex
   )(avatars, maxDisplayedLength);
 
   return {
     restCount,
-    avatars: formatedAvatars,
+    avatars: formattedAvatars,
   };
 };
 
+//TODO: rename func isAvatar
 export const isSomeChildIsNotAvatar = (avatars: JSX.Element[]): boolean =>
+  //TODO: replace displayName => componentNAme
   avatars.some((avatar: JSX.Element) => avatar.type.displayName !== AvatarName);
 
 export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGroupProps) => {
