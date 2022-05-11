@@ -10,11 +10,10 @@
 
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 
-
   &::before,
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     bottom: -0.1rem;
     display: block;

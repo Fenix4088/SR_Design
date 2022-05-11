@@ -16,7 +16,6 @@
   background: $NewYear;
   border: 3px solid #fff;
   z-index: 2;
-
 }
 
 .avatar {
@@ -31,7 +30,12 @@
   &.logo {
     border: 1px dashed $Storm;
 
-    &.huge, &.large, &.middle, &.small, &.super-small, &.tiny {
+    &.huge,
+    &.large,
+    &.middle,
+    &.small,
+    &.super-small,
+    &.tiny {
       .name {
         color: $Storm;
         font-size: cRem(14);
@@ -40,7 +44,12 @@
     }
   }
 
-  &.huge, &.large, &.middle, &.small, &.super-small, &.tiny {
+  &.huge,
+  &.large,
+  &.middle,
+  &.small,
+  &.super-small,
+  &.tiny {
     border-radius: 50%;
     @include flex(center, center);
 
@@ -65,7 +74,7 @@
       top: -200px;
       left: 0;
       background: $DubaiO0_3;
-      transition: all .4s ease;
+      transition: all 0.4s ease;
 
       .control-btn-wrapper {
         position: absolute;
@@ -73,10 +82,11 @@
         top: 50%;
         left: -300%;
         transform: translate(-50%, -50%);
-        transition: all .4s ease .4s;
+        transition: all 0.4s ease 0.4s;
         @include flex(space-evenly, center);
 
-        .add-btn, .remove-btn {
+        .add-btn,
+        .remove-btn {
           width: 38px;
           height: 38px;
           background: $DubaiO0_5;
@@ -86,7 +96,7 @@
 
         .add-btn {
           cursor: pointer;
-          input[type=file] {
+          input[type='file'] {
             display: none;
           }
         }
@@ -94,8 +104,6 @@
         .remove-btn {
         }
       }
-
-
     }
 
     &:hover {
@@ -103,7 +111,7 @@
         top: 0;
 
         .control-btn-wrapper {
-          left: 50%
+          left: 50%;
         }
       }
     }
@@ -168,10 +176,5 @@
 
   &.introvert {
     background: $Introvert;
-
   }
-
-
-
 }
-

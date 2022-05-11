@@ -3,7 +3,17 @@
 @import '../../styles/functions';
 
 //generics
-.h1, .h2, .h3, .h4, .h5, .h6, .body-1, .body-2, .body-3, .captions, .overline {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.body-1,
+.body-2,
+.body-3,
+.captions,
+.overline {
   color: $Dubai;
   &.semiBold {
     font-weight: 600;
@@ -14,10 +24,14 @@
   }
 }
 
-.body-1, .body-2, .body-3, .captions, .overline {
+.body-1,
+.body-2,
+.body-3,
+.captions,
+.overline {
   &.regular {
     font-weight: 400;
-  };
+  }
 
   &.medium {
     font-weight: 500;

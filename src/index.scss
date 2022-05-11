@@ -1,13 +1,3 @@
-.sandbox {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-
-  & > * {
-    margin-bottom: 15px;
-  }
-}
-
 *,
 *::after,
 *::before {
@@ -95,7 +85,8 @@ h6 {
   font-size: 200px;
 }
 
-svg, video {
+svg,
+video {
   display: inline-block;
 }
 
@@ -108,6 +99,18 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 :root {

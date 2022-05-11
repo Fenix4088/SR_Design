@@ -1,7 +1,6 @@
 import React, { CSSProperties } from 'react';
 import classNames from 'classnames';
-import { ReactComponent as CameraIcon } from '../../icons/camera.svg';
-import { ReactComponent as TrashIcon } from '../../icons/trash.svg';
+import { CameraIcon, TrashIcon } from '../Icons';
 import styles from './Avatar.module.scss';
 
 type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';

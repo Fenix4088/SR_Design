@@ -1,6 +1,6 @@
-@import "../../../styles/mixins";
-@import "../../../styles/functions";
-@import "../../../styles/colors";
+@import '../../../styles/mixins';
+@import '../../../styles/functions';
+@import '../../../styles/colors';
 
 .avatar-group-wrapper {
   @include flex(center, center);
@@ -15,7 +15,6 @@
       background: $Mood;
       cursor: pointer;
       @include flex(center, center);
-
     }
 
     &.small {
@@ -35,14 +34,13 @@
       height: cRem(24);
       font-size: cRem(8);
     }
-
   }
 
   & > *:not(.avatar-count) {
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -53,5 +51,4 @@
       transform: translate(-6%, -7%);
     }
   }
-
 }

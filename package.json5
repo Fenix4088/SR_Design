@@ -11,17 +11,33 @@
   "scripts": {
     "start": "pnpm rollup:watch",
     "build": "cross-env NODE_ENV=production run-s clean rollup:build",
+
+    // rollup
     "rollup": "rollup --config \"./scripts/rollup.config.js\"",
     "rollup:build": "pnpm rollup",
     "rollup:watch": "pnpm rollup --watch",
+
+    // prettier
     "prettier": "prettier --config \"./prettier.config.js\" --ignore-unknown --write",
     "prettier:src": "pnpm prettier -- \"./src/**/*\"",
+
+    // storybook
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook --output-dir \"./docs\"",
+
+    // github pages
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "clean": "rimraf \"./dist\"",
-    "json": "json5 --validate \"./package.json5\" &&       json5       --space 2       --out-file \"./package.json\"       \"./package.json5\""
+
+    // other
+    "clean": "rimraf \"./dist\""  ,
+
+    // utils
+    "json": "json5 --validate \"./package.json5\" && \
+      json5 \
+      --space 2 \
+      --out-file \"./package.json\" \
+      \"./package.json5\"",
   },
   "files": [
     "dist"
@@ -30,16 +46,20 @@
   "author": "Anatoliy Skichko",
   "license": "ISC",
   "devDependencies": {
+    // rollup
     "rollup": "^2.72.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@rollup/plugin-replace": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-postcss": "^4.0.2", // css
+    "rollup-plugin-terser": "^7.0.2", // js
     "rollup-plugin-analyzer": "^4.0.0",
     "@svgr/rollup": "^6.2.1",
+//    "@rollup/plugin-url": "^7.0.0",
+
+    // storybook
     "@storybook/react": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
@@ -48,31 +68,45 @@
     "@storybook/testing-library": "^0.0.11",
     "@storybook/builder-webpack5": "^6.4.22",
     "@storybook/manager-webpack5": "^6.4.22",
+    // storybook-webpack
+    // loaders
     "@svgr/webpack": "^6.2.1",
     "css-loader": "^6.7.1",
     "postcss-loader": "^6.2.1",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
+    // plugins
     "mini-css-extract-plugin": "^2.6.0",
+    // storybook-other
     "@babel/core": "^7.17.10",
     "babel-loader": "^8.2.5",
+
+    // types
     "@types/react": "^18.0.9",
+
+    // css/scss
     "autoprefixer": "^10.4.7",
     "postcss": "8.4.13",
     "postcss-preset-env": "^7.5.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "sass": "^1.51.0",
-    "tslib": "^2.4.0",
+
+    // typescript
+    "tslib": "^2.4.0", // need for typescript
     "typescript": "^4.6.4",
+
+    // utils
     "prettier": "^2.6.2",
     "cross-env": "^7.0.3",
     "json5": "^2.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "gh-pages": "^4.0.0",
-    "react": "^18.1.0",
-    "react-dom": "^17.0.2",
+
+    // libs (peer deps)
+    "react": "^18.1.0", // used in UI library
+    "react-dom": "^17.0.2", // need for storybook (exact from 17 and above, not 18)
     "classnames": "^2.3.1"
   },
   "dependencies": {},

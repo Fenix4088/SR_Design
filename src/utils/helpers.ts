@@ -1,1 +1,1 @@
-export const warning = (message: string) => console.error(`Warning: ${message}`)
+export const warning = (message: string) => console.error(`Warning: ${message}`);

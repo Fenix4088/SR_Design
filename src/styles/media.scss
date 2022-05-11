@@ -10,11 +10,11 @@ $mobileL: 480px;
 
 @mixin MQ($viewport, $practice: MF) {
   @if $practice == MF {
-    @media(min-width: $viewport) {
+    @media (min-width: $viewport) {
       @content;
     }
   } @else if $practice == DF {
-    @media(max-width: $viewport) {
+    @media (max-width: $viewport) {
       @content;
     }
   }
