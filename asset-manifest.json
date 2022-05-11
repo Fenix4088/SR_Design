@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/SR_Design/static/css/main.46d6a68c.css",
+    "main.js": "/SR_Design/static/js/main.c2fb6c99.js",
+    "static/js/787.28cb0dcd.chunk.js": "/SR_Design/static/js/787.28cb0dcd.chunk.js",
+    "static/media/trash.svg": "/SR_Design/static/media/trash.c343ab76c576e1378b25e64df20353d1.svg",
+    "static/media/bell.svg": "/SR_Design/static/media/bell.d3a14c783a5b646be400578ad42a86dd.svg",
+    "static/media/camera.svg": "/SR_Design/static/media/camera.eaa9968789d67e9192659ae18b2b90b9.svg",
+    "static/media/random.svg": "/SR_Design/static/media/random.8c37244b8f4a2ad4259ee1af0cd69fdb.svg",
+    "index.html": "/SR_Design/index.html",
+    "main.46d6a68c.css.map": "/SR_Design/static/css/main.46d6a68c.css.map",
+    "main.c2fb6c99.js.map": "/SR_Design/static/js/main.c2fb6c99.js.map",
+    "787.28cb0dcd.chunk.js.map": "/SR_Design/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46d6a68c.css",
+    "static/js/main.c2fb6c99.js"
+  ]
+}
