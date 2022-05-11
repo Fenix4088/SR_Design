@@ -12,6 +12,7 @@ interface AvatarBase extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<H
     value?: File[];
     onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void
     onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    fileInputHtmlProps?: Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'value' | 'onChange'>
 }
 
 interface IAvatar extends AvatarBase {
@@ -30,7 +31,7 @@ type Overload = {
     (props: Logo): JSX.Element;
 }
 
-export const Avatar: Overload = ({size, color, type, className, userName, onAdd, onRemove, value, ...props}: any) => {
+export const Avatar: Overload = ({size, color, type, className, userName, onAdd, onRemove, value, fileInputHtmlProps, ...props}: any) => {
 
     const avatarCN = classNames(styles['avatar'], styles[size], styles[color], className);
     const logoCN = classNames(styles['avatar'], styles['logo'], styles['huge'], className);
@@ -53,7 +54,7 @@ export const Avatar: Overload = ({size, color, type, className, userName, onAdd,
     const controlPanel = isControlPanelVisible ? <div className={styles['control-panel']}>
         <div className={styles['control-btn-wrapper']}>
             <label className={styles['add-btn']} >
-                <input value={value} type="file" onChange={onAddHandler}/>
+                <input {...fileInputHtmlProps} value={value} type="file" onChange={onAddHandler}/>
                 <CameraIcon/>
             </label>
             <span className={styles['remove-btn']} onClick={onRemoveHandler}>
