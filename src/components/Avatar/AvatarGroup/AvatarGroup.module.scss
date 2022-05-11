@@ -1,12 +1,44 @@
-.avatar-group-wrapper {
-  //display: grid;
-  //grid-template-rows: 1fr;
-  //grid-template-columns: 1fr;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@import "../../../styles/mixins";
+@import "../../../styles/functions";
+@import "../../../styles/colors";
 
-  & > * {
+.avatar-group-wrapper {
+  @include flex(center, center);
+
+  .avatar-count {
+    &.small,
+    &.super-small,
+    &.tiny {
+      border-radius: 50%;
+      font-weight: 600;
+      color: #000;
+      background: $Mood;
+      cursor: pointer;
+      @include flex(center, center);
+
+    }
+
+    &.small {
+      width: cRem(40);
+      height: cRem(40);
+      font-size: cRem(13);
+    }
+
+    &.super-small {
+      width: cRem(32);
+      height: cRem(32);
+      font-size: cRem(10);
+    }
+
+    &.tiny {
+      width: cRem(24);
+      height: cRem(24);
+      font-size: cRem(8);
+    }
+
+  }
+
+  & > *:not(.avatar-count) {
     position: relative;
 
     &::before {
