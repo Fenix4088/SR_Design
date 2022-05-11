@@ -1,22 +1,41 @@
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement } from 'react';
+import { AvatarName } from '../Avatar';
+import { warning } from '../../../utils/helpers';
+import styles from './AvatarGroup.module.scss';
 
 interface AvatarGroupReturnParams {
-    type: 'avatar';
-    size: 'small' | 'super-small' | 'tiny'
+  type: 'avatar';
+  size: 'small' | 'super-small' | 'tiny';
 }
 
-interface AvatarGroupProps extends AvatarGroupReturnParams{
-    children: (avatarParams: AvatarGroupReturnParams) => ReactElement;
+interface AvatarGroupProps extends AvatarGroupReturnParams {
+  children: (avatarParams: AvatarGroupReturnParams) => ReactElement;
 }
 
-export const AvatarGroup = ({type, size, children}: AvatarGroupProps) => {
-    const content = children({type, size})
-    console.log(content.props)
-    console.log(content.props.children[0].type.displayName)
-    console.log(content.props.children.length)
-    return (
-        <div>
-            {content}
-        </div>
-    )
-}
+export const AvatarGroup = ({ type, size, children }: AvatarGroupProps) => {
+  const avatars = children({ type, size });
+
+  if (avatars.props.children.some((avatar: JSX.Element) => avatar.type.displayName !== AvatarName)) {
+    warning('AvatarGroup should contain just Avatar components');
+    return null;
+  }
+
+  let zIndex = avatars.props.children.length;
+
+  const testAvatar = avatars.props.children.map((avatar: JSX.Element) => {
+    --zIndex
+    return {
+      ...avatar,
+      props: {
+        ...avatar.props,
+        wrapperStyles: {
+          zIndex: zIndex,
+        },
+      },
+    };
+  });
+
+  console.log(avatars.props.children.length);
+  console.log(avatars.props.children);
+  return <div className={styles['avatar-group-wrapper']}>{testAvatar}</div>;
+};

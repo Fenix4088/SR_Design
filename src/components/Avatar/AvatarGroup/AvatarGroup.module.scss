@@ -1,0 +1,25 @@
+.avatar-group-wrapper {
+  //display: grid;
+  //grid-template-rows: 1fr;
+  //grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 115%;
+      height: 115%;
+      background: #fff;
+      border-radius: 50%;
+      transform: translate(-6%, -7%);
+    }
+  }
+
+}

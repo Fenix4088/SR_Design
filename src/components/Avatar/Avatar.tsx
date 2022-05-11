@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import classNames from 'classnames';
 import { ReactComponent as CameraIcon } from '../../icons/camera.svg';
 import { ReactComponent as TrashIcon } from '../../icons/trash.svg';
@@ -9,6 +9,8 @@ type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
 
 type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> & {
   src: string;
+  wrapperClassName?: string;
+  wrapperStyles?: CSSProperties;
 };
 
 type AvatarControls = {
@@ -57,10 +59,13 @@ export const Avatar: Overload = ({
   onRemove,
   value,
   fileInputHtmlProps,
+  wrapperClassName,
+  wrapperStyles,
   ...props
 }: any) => {
   const avatarCN = classNames(styles['avatar'], styles[size], styles[color], className);
   const logoCN = classNames(styles['avatar'], styles['logo'], styles['huge'], className);
+  const wrapperCN = classNames(styles['wrapper'], wrapperClassName);
 
   const isLogoType = type === 'logo';
   const currentCN = isLogoType ? logoCN : avatarCN;
@@ -98,7 +103,7 @@ export const Avatar: Overload = ({
   ) : null;
 
   return (
-    <div className={styles['wrapper']}>
+    <div className={wrapperCN} style={wrapperStyles}>
       <div {...props} className={currentCN}>
         {controlPanel}
         {avatarContent}
@@ -108,4 +113,6 @@ export const Avatar: Overload = ({
   );
 };
 
-(Avatar as React.FC).displayName = 'Avatar'
+(Avatar as React.FC).displayName = 'Avatar';
+
+export const AvatarName = (Avatar as React.FC).displayName;
