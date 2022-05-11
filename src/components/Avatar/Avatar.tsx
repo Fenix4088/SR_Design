@@ -91,9 +91,12 @@ export const Avatar: Overload = ({
   ) : null;
 
   return (
-    <div {...props} className={currentCN}>
-      {controlPanel}
-      <div className={styles['name']}>{userNameNodeContent}</div>
+    <div className={styles['wrapper']}>
+      <div {...props} className={currentCN}>
+        {controlPanel}
+        <div className={styles['name']}>{userNameNodeContent}</div>
+      </div>
+      {isOnline && <div className={styles['online-indicator']} />}
     </div>
   );
 };

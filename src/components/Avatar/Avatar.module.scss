@@ -2,6 +2,23 @@
 @import '../../styles/colors';
 @import '../../styles/mixins';
 
+.wrapper {
+  position: relative;
+}
+
+.online-indicator {
+  position: absolute;
+  right: cRem(10);
+  bottom: cRem(5);
+  width: cRem(22);
+  height: cRem(22);
+  border-radius: 50%;
+  background: $NewYear;
+  border: 3px solid #fff;
+  z-index: 2;
+
+}
+
 .avatar {
   position: relative;
   overflow: hidden;
@@ -149,6 +166,8 @@
     background: $Introvert;
 
   }
+
+
 
 }
 

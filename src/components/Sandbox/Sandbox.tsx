@@ -86,6 +86,7 @@ export const Sandbox = () => {
 
         <Avatar
           src={''}
+          isOnline
           userName={'Billy Milligan'}
           type={'avatar'}
           size={'huge'}
