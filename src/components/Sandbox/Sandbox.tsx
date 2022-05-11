@@ -6,12 +6,14 @@ import {Badge} from "../Badge/Badge";
 import {ReactComponent as BellIcon} from '../../icons/bell.svg'
 import {ReactComponent as RandomIcon} from '../../icons/random.svg'
 import {Avatar} from "../Avatar/Avatar";
+import {log} from "util";
 
 
 export const Sandbox = () => {
     const [state, setState] = React.useState<boolean>(false);
+    const [files, setFiles] = React.useState<File[]>([]);
 
-    const ref = React.useRef<any>(null);
+    // const ref = React.useRef<any>(null);
 
     const onMouseInHandler = () => console.log("onMouseInHandler")
 
@@ -77,10 +79,13 @@ export const Sandbox = () => {
                     </Badge.Icon>
                 </Badge>
                 <h2>Avatar</h2>
-                <div>Hello</div>
-                <input ref={ref} type="file" />
-                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'} />
-                <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'}/>
+
+                <Avatar userName={'Billy Milligan'} type={'avatar'} size={'huge'} color={'birthday'} onAdd={(e, files) => {
+                    setFiles(files)
+                }} onRemove={() => {
+                    setFiles([])
+                }}/>
+                <Avatar userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
                 <Avatar type={'logo'}/>
             </div>
         </>

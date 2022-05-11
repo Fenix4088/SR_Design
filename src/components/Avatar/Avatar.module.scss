@@ -64,6 +64,10 @@
         }
 
         .add-btn {
+          cursor: pointer;
+          input[type=file] {
+            display: none;
+          }
         }
 
         .remove-btn {

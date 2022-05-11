@@ -28,6 +28,7 @@ type TBadge = typeof BadgeBase & {
 }
 
 export const Badge = BadgeBase as TBadge
+Badge.displayName = 'Badge';
 
 
 Badge.Icon = BIcon
