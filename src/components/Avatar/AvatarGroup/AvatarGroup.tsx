@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { AvatarName } from '../Avatar';
 import { warning } from '../../../utils/helpers';
 import styles from './AvatarGroup.module.scss';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 interface AvatarGroupReturnParams {
   type: 'avatar';
@@ -10,30 +10,26 @@ interface AvatarGroupReturnParams {
 }
 
 interface AvatarGroupProps extends Omit<AvatarGroupReturnParams, 'type'> {
-  maxDisplayedLength?: number
+  maxDisplayedLength?: number;
   children: (avatarParams: AvatarGroupReturnParams) => ReactElement;
 }
 
-export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGroupProps) => {
+interface UseFormatAvatarGroupChildrenReturnType {
+  avatars: JSX.Element[];
+  restCount: number;
+}
 
-  const avatarCountCN = classNames(styles['avatar-count'], styles[size])
+export const useFormatAvatarGroupChildren = (
+  avatars: JSX.Element[],
+  maxDisplayedLength = 4
+): UseFormatAvatarGroupChildrenReturnType => {
+  const restCount = avatars.length - maxDisplayedLength;
 
-  const avatars = children({ type: 'avatar', size });
-  const avatarGroupChildren: JSX.Element[] = avatars.props.children;
+  const testAvatar = avatars.slice(0, maxDisplayedLength);
 
-  //TODO: func
-  if (avatarGroupChildren.some((avatar: JSX.Element) => avatar.type.displayName !== AvatarName)) {
-    warning('AvatarGroup should contain just Avatar components');
-    return null;
-  }
-
-  const testAvatar = avatarGroupChildren.slice(0, maxDisplayedLength)
-  const restCount = avatarGroupChildren.length - maxDisplayedLength;
-
-  //TODO: function
-  let zIndex = avatarGroupChildren.length;
-  const testAvatar2 = testAvatar.map((avatar: JSX.Element) => {
-    --zIndex
+  let zIndex = avatars.length;
+  const testAvatar2 = testAvatar.map((avatar) => {
+    --zIndex;
     return {
       ...avatar,
       props: {
@@ -45,7 +41,35 @@ export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGr
     };
   });
 
-  console.log(avatars.props.children.length);
-  console.log(avatars.props.children);
-  return <div className={styles['avatar-group-wrapper']}>{testAvatar2} <div className={avatarCountCN}>+{restCount}</div></div>;
+  return {
+    restCount,
+    avatars: testAvatar2,
+  };
+};
+
+export const isSomeChildIsNotAvatar = (avatars: JSX.Element[]): boolean =>
+  avatars.some((avatar: JSX.Element) => avatar.type.displayName === AvatarName);
+
+export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGroupProps) => {
+  const avatarCountCN = classNames(styles['avatar-count'], styles[size]);
+
+  const avatars = children({ type: 'avatar', size });
+  const avatarGroupChildren: JSX.Element[] = avatars.props.children;
+
+
+  if (!isSomeChildIsNotAvatar(avatarGroupChildren)) {
+    warning('AvatarGroup should contain just Avatar components');
+    return null;
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { avatars: formatAvatars, restCount } = useFormatAvatarGroupChildren(avatarGroupChildren, maxDisplayedLength);
+
+
+  return (
+    <div className={styles['avatar-group-wrapper']}>
+      {formatAvatars}
+      <div className={avatarCountCN}>+{restCount}</div>
+    </div>
+  );
 };
