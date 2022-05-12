@@ -30444,6 +30444,64 @@
       return t;
   }
 
+  function __awaiter(thisArg, _arguments, P, generator) {
+      function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+      return new (P || (P = Promise))(function (resolve, reject) {
+          function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+          function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+          function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+          step((generator = generator.apply(thisArg, _arguments || [])).next());
+      });
+  }
+
+  function __generator(thisArg, body) {
+      var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+      return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+      function verb(n) { return function (v) { return step([n, v]); }; }
+      function step(op) {
+          if (f) throw new TypeError("Generator is already executing.");
+          while (_) try {
+              if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+              if (y = 0, t) op = [op[0] & 2, t.value];
+              switch (op[0]) {
+                  case 0: case 1: t = op; break;
+                  case 4: _.label++; return { value: op[1], done: false };
+                  case 5: _.label++; y = op[1]; op = [0]; continue;
+                  case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                  default:
+                      if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                      if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                      if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                      if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                      if (t[2]) _.ops.pop();
+                      _.trys.pop(); continue;
+              }
+              op = body.call(thisArg, _);
+          } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+          if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+      }
+  }
+
+  function __values(o) {
+      var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+      if (m) return m.call(o);
+      if (o && typeof o.length === "number") return {
+          next: function () {
+              if (o && i >= o.length) o = void 0;
+              return { value: o && o[i++], done: !o };
+          }
+      };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+  }
+
+  function __asyncValues(o) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var m = o[Symbol.asyncIterator], i;
+      return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+      function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+      function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+  }
+
   var CameraIcon = function () {
       return (React__default["default"].createElement("svg", { width: "20", height: "20", viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
           React__default["default"].createElement("path", { d: "M16 5H13.75L13.4866 4.29772C13.1939 3.51716 12.4477 3 11.614 3H8.38703C7.55425 3 6.80859 3.516 6.51519 4.29541L6.25 5H4C2.89544 5 2 5.89538 2 7V15C2 16.1046 2.89544 17 4 17H16C17.1046 17 18 16.1046 18 15V7C18 5.89538 17.1046 5 16 5ZM16.5 15C16.5 15.2757 16.2757 15.5 16 15.5H4C3.72431 15.5 3.5 15.2757 3.5 15V7C3.5 6.72431 3.72431 6.5 4 6.5H7.28816L7.65387 5.52844L7.91906 4.82384C7.99194 4.63012 8.18006 4.5 8.38703 4.5H11.614C11.8212 4.5 12.0094 4.63037 12.0822 4.82441L12.3455 5.52669L12.7105 6.5H16C16.2757 6.5 16.5 6.72431 16.5 7V15ZM10 7.5C8.06703 7.5 6.5 9.06697 6.5 11C6.5 12.933 8.06703 14.5 10 14.5C11.933 14.5 13.5 12.933 13.5 11C13.5 9.06697 11.933 7.5 10 7.5ZM10 13C8.89722 13 8 12.1028 8 11C8 9.89716 8.89722 9 10 9C11.1028 9 12 9.89716 12 11C12 12.1028 11.1028 13 10 13Z", fill: "white" })));
@@ -30516,6 +30574,69 @@
       checkImageMIMEType: function (str) { return /image\/jpeg|png/.test(str); },
       checkExcelMIMEType: function (str) { return /vdn\.(ms-excel|openxmlformats)/.test(str); },
   };
+  var readFile = function (file) {
+      var reader = new FileReader();
+      return new Promise(function (resolve, reject) {
+          reader.onabort = function () { return reject('file reading was aborted'); };
+          reader.onerror = function () { return reject('file reading has failed'); };
+          reader.onloadend = function (e) {
+              resolve(e.target.result);
+          };
+          reader.readAsDataURL(file);
+      });
+  };
+  var convertToBase64 = function (files) { var files_1, files_1_1; return __awaiter(void 0, void 0, void 0, function () {
+      var base64Arr, file, base64, e_1, e_2_1;
+      var e_2, _a;
+      return __generator(this, function (_b) {
+          switch (_b.label) {
+              case 0:
+                  base64Arr = [];
+                  _b.label = 1;
+              case 1:
+                  _b.trys.push([1, 9, 10, 15]);
+                  files_1 = __asyncValues(files);
+                  _b.label = 2;
+              case 2: return [4 /*yield*/, files_1.next()];
+              case 3:
+                  if (!(files_1_1 = _b.sent(), !files_1_1.done)) return [3 /*break*/, 8];
+                  file = files_1_1.value;
+                  _b.label = 4;
+              case 4:
+                  _b.trys.push([4, 6, , 7]);
+                  return [4 /*yield*/, readFile(file)];
+              case 5:
+                  base64 = _b.sent();
+                  if (!base64)
+                      return [3 /*break*/, 7];
+                  base64Arr.push(base64);
+                  return [3 /*break*/, 7];
+              case 6:
+                  e_1 = _b.sent();
+                  console.error(e_1);
+                  return [3 /*break*/, 7];
+              case 7: return [3 /*break*/, 2];
+              case 8: return [3 /*break*/, 15];
+              case 9:
+                  e_2_1 = _b.sent();
+                  e_2 = { error: e_2_1 };
+                  return [3 /*break*/, 15];
+              case 10:
+                  _b.trys.push([10, , 13, 14]);
+                  if (!(files_1_1 && !files_1_1.done && (_a = files_1.return))) return [3 /*break*/, 12];
+                  return [4 /*yield*/, _a.call(files_1)];
+              case 11:
+                  _b.sent();
+                  _b.label = 12;
+              case 12: return [3 /*break*/, 14];
+              case 13:
+                  if (e_2) throw e_2.error;
+                  return [7 /*endfinally*/];
+              case 14: return [7 /*endfinally*/];
+              case 15: return [2 /*return*/, base64Arr];
+          }
+      });
+  }); };
 
   var Avatar = function (_a) {
       var size = _a.size, src = _a.src, _b = _a.isOnline, isOnline = _b === void 0 ? false : _b, color = _a.color, type = _a.type, className = _a.className, userName = _a.userName, onAdd = _a.onAdd, onRemove = _a.onRemove, value = _a.value, _c = _a.fileInputHtmlProps, fileInputHtmlProps = _c === void 0 ? {} : _c, wrapperClassName = _a.wrapperClassName, wrapperStyles = _a.wrapperStyles, props = __rest(_a, ["size", "src", "isOnline", "color", "type", "className", "userName", "onAdd", "onRemove", "value", "fileInputHtmlProps", "wrapperClassName", "wrapperStyles"]);
@@ -30528,12 +30649,23 @@
       var userNameFirstLetter = userName ? userName.trim().charAt(0).toUpperCase() : null;
       var userNameNodeContent = isLogoType ? 'Add logo' : userNameFirstLetter;
       var isControlPanelVisible = isLogoType || size === 'huge';
-      var onAddHandler = function (e) {
-          var files = e.currentTarget.files;
-          if (!files)
-              return;
-          onAdd === null || onAdd === void 0 ? void 0 : onAdd(e, filterByMIME(files, MIMECheckerAPI.checkImageMIMEType));
-      };
+      var onAddHandler = function (event) { return __awaiter(void 0, void 0, void 0, function () {
+          var files, checkedFiles, base64Arr;
+          return __generator(this, function (_a) {
+              switch (_a.label) {
+                  case 0:
+                      files = event.currentTarget.files;
+                      if (!files)
+                          return [2 /*return*/];
+                      checkedFiles = filterByMIME(files, MIMECheckerAPI.checkImageMIMEType);
+                      return [4 /*yield*/, convertToBase64(checkedFiles)];
+                  case 1:
+                      base64Arr = _a.sent();
+                      onAdd === null || onAdd === void 0 ? void 0 : onAdd({ event: event, files: checkedFiles, base64Arr: base64Arr });
+                      return [2 /*return*/];
+              }
+          });
+      }); };
       var onRemoveHandler = function (e) {
           onRemove === null || onRemove === void 0 ? void 0 : onRemove(e);
       };
@@ -30724,10 +30856,9 @@
   var testUrl3 = 'https://www.meme-arsenal.com/memes/100773de10bd652a2366e129c5053a0a.jpg';
   var Sandbox = function () {
       var _a = React__default["default"].useState(false), state = _a[0], setState = _a[1];
-      // @ts-ignore
-      var _b = React__default["default"].useState([]); _b[0]; var setFiles = _b[1];
-      // const ref = React.useRef<any>(null);
+      var _b = React__default["default"].useState(''), src = _b[0], setSrc = _b[1];
       var onMouseInHandler = function () { return console.log('onMouseInHandler'); };
+      var onAddClb = function (params) { return console.log(params); };
       return (React__default["default"].createElement(React__default["default"].Fragment, null,
           React__default["default"].createElement("div", { className: 'sandbox' },
               React__default["default"].createElement("h2", null, "Typography"),
@@ -30767,24 +30898,19 @@
                   React__default["default"].createElement(Badge.Icon, null,
                       React__default["default"].createElement(BellIcon, null))),
               React__default["default"].createElement("h2", null, "Avatar"),
-              React__default["default"].createElement(Avatar, { src: testUrl, isOnline: true, userName: 'Billy Milligan', type: 'avatar', size: 'huge', color: 'birthday', onAdd: function (_e, files) {
-                      setFiles(files);
+              React__default["default"].createElement(Avatar, { src: src || testUrl, isOnline: true, userName: 'Billy Milligan', type: 'avatar', size: 'huge', color: 'birthday', onAdd: function (_a) {
+                      var event = _a.event, files = _a.files, base64Arr = _a.base64Arr;
+                      console.log({ event: event, files: files, base64Arr: base64Arr });
+                      setSrc(base64Arr[0]);
                   }, onRemove: function () {
-                      setFiles([]);
+                      setSrc('');
                   } }),
               React__default["default"].createElement(Avatar, { src: '', userName: 'Anton Milifanov', type: 'avatar', size: 'middle', color: 'introvert' }),
               React__default["default"].createElement(Avatar, { src: testUrl3, userName: 'Dima Makeev', type: 'avatar', size: 'tiny', color: 'extrovert' }),
-              React__default["default"].createElement(Avatar, { src: '', type: 'logo', onAdd: function (_e, files) {
-                      console.log(files);
-                      setFiles(files);
-                  }, onRemove: function () {
-                      setFiles([]);
-                  } }),
-              React__default["default"].createElement(Avatar, { src: testUrl2, type: 'logo', onAdd: function (_e, files) {
-                      setFiles(files);
-                  }, onRemove: function () {
-                      setFiles([]);
-                  } }),
+              React__default["default"].createElement(Avatar, { src: '', type: 'logo', onAdd: onAddClb, onRemove: function () { } }),
+              React__default["default"].createElement(Avatar, { src: testUrl2, type: 'logo', onAdd: function (params) {
+                      console.log(params);
+                  }, onRemove: function () { } }),
               React__default["default"].createElement("h2", null, "Avatars group"),
               React__default["default"].createElement(AvatarGroup, { size: 'tiny' }, function (avatarParams) { return (React__default["default"].createElement(React__default["default"].Fragment, null,
                   React__default["default"].createElement(Avatar, __assign({}, avatarParams, { src: testUrl, userName: 'Anton Milifanov', color: 'introvert' })),

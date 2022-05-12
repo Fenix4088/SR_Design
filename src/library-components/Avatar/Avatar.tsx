@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react';
 import classNames from 'classnames';
 import { CameraIcon, TrashIcon } from '../Icons';
 import styles from './Avatar.module.scss';
-import {filterByMIME, MIMECheckerAPI} from "../../utils/utils";
+import {convertToBase64, filterByMIME, MIMECheckerAPI} from "../../utils/utils";
 
 type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';
 type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
@@ -12,6 +12,12 @@ type FileInputProps = Omit<
   'value' | 'onChange' | 'type' | 'multiple' | 'accept'
   >
 
+export interface OnAddParams {
+  event: React.MouseEvent<HTMLSpanElement, MouseEvent>;
+  files: File[]
+  base64Arr: (string | ArrayBuffer)[]
+}
+
 type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> & {
   src: string;
   wrapperClassName?: string;
@@ -20,7 +26,7 @@ type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivEleme
 
 type AvatarControls = {
   value?: File[];
-  onAdd: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void;
+  onAdd: (params: OnAddParams) => void;
   onRemove: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
   fileInputHtmlProps?: FileInputProps;
 };
@@ -84,11 +90,14 @@ export const Avatar: Overload = ({
   const userNameNodeContent = isLogoType ? 'Add logo' : userNameFirstLetter;
   const isControlPanelVisible = isLogoType || size === 'huge';
 
-  const onAddHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const {files} = e.currentTarget;
+  const onAddHandler = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {files} = event.currentTarget;
     if(!files) return;
 
-    onAdd?.(e, filterByMIME(files, MIMECheckerAPI.checkImageMIMEType));
+    const checkedFiles = filterByMIME(files, MIMECheckerAPI.checkImageMIMEType)
+    const base64Arr = await convertToBase64(checkedFiles)
+
+    onAdd?.({event, files: checkedFiles, base64Arr});
   };
   const onRemoveHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
     onRemove?.(e);

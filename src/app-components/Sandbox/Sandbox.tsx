@@ -8,19 +8,17 @@ const testUrl =
 const testUrl2 = 'https://i.pinimg.com/736x/b6/0f/05/b60f05425a8191b70f3dea5a0ba893c7.jpg';
 const testUrl3 = 'https://www.meme-arsenal.com/memes/100773de10bd652a2366e129c5053a0a.jpg';
 
+
+
+
 export const Sandbox = () => {
   const [state, setState] = React.useState<boolean>(false);
-  // @ts-ignore
-  const [files, setFiles] = React.useState<File[]>([]);
-
-  // const ref = React.useRef<any>(null);
+  const [src, setSrc] = React.useState<string>('');
 
   const onMouseInHandler = () => console.log('onMouseInHandler');
 
-  // @ts-ignore
-  const onCHangeHandler = (e: any): void => {
-    console.log(e.currentTarget.value);
-  };
+  const onAddClb = (params: string) => console.log(params);
+
 
   return (
     <>
@@ -83,17 +81,18 @@ export const Sandbox = () => {
         </Badge>
         <h2>Avatar</h2>
         <Avatar
-          src={testUrl}
+          src={src || testUrl}
           isOnline
           userName={'Billy Milligan'}
           type={'avatar'}
           size={'huge'}
           color={'birthday'}
-          onAdd={(_e, files) => {
-            setFiles(files);
+          onAdd={({ event, files, base64Arr }) => {
+            console.log({ event, files, base64Arr });
+            setSrc(base64Arr[0] as string);
           }}
           onRemove={() => {
-            setFiles([]);
+            setSrc('');
           }}
         />
         <Avatar src={''} userName={'Anton Milifanov'} type={'avatar'} size={'middle'} color={'introvert'} />
@@ -101,23 +100,16 @@ export const Sandbox = () => {
         <Avatar
           src={''}
           type={'logo'}
-          onAdd={(_e, files) => {
-            console.log(files)
-            setFiles(files);
-          }}
-          onRemove={() => {
-            setFiles([]);
-          }}
+          onAdd={onAddClb}
+          onRemove={() => {}}
         />
         <Avatar
           src={testUrl2}
           type={'logo'}
-          onAdd={(_e, files) => {
-            setFiles(files);
+          onAdd={(params) => {
+            console.log(params);
           }}
-          onRemove={() => {
-            setFiles([]);
-          }}
+          onRemove={() => {}}
         />
 
         <h2>Avatars group</h2>
