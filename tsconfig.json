@@ -22,7 +22,7 @@
      "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
      "removeComments": false,                           /* Disable emitting comments. */
      "newLine": "lf",                                /* Set the newline character for emitting files. */
-     "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+     "noEmitOnError": false,                            /* Disable emitting files if any type checking errors are reported. */
 
     /* Interop Constraints */
     "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */

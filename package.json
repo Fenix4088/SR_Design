@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=production run-s clean rollup:build",
     "rollup": "rollup --config \"./scripts/rollup.config.js\"",
     "rollup:build": "pnpm rollup",
-    "rollup:watch": "pnpm rollup --watch",
+    "rollup:watch": "pnpm rollup --watch --waitForBundleInput",
     "prettier": "prettier --config \"./prettier.config.js\" --ignore-unknown --write",
     "prettier:src": "pnpm prettier -- \"./src/**/*\"",
     "storybook": "start-storybook -p 6006",
@@ -21,6 +21,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "clean": "rimraf \"./dist\"",
+    "serve": "browser-sync start       --server './public'       --files '**/*.(html|css|js)'       --port 4000       --open \"http://localhost:4000/\"      --no-ui       --no-notify",
     "json": "json5 --validate \"./package.json5\" &&       json5       --space 2       --out-file \"./package.json\"       \"./package.json5\""
   },
   "files": [
@@ -58,6 +59,7 @@
     "@babel/core": "^7.17.10",
     "babel-loader": "^8.2.5",
     "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
     "autoprefixer": "^10.4.7",
     "postcss": "8.4.13",
     "postcss-preset-env": "^7.5.0",
@@ -70,9 +72,11 @@
     "json5": "^2.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "browser-sync": "^2.27.9",
     "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^17.0.2",
+    "react-dom18": "npm:react-dom@^18.1.0",
     "classnames": "^2.3.1"
   },
   "dependencies": {},
