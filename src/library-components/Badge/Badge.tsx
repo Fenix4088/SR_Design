@@ -14,7 +14,7 @@ interface BadgeProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<
   badgeType?: 'basic' | 'notification';
 }
 
-export const Badge = ({ children, badgeType = 'basic', className, ...props }: BadgeProps) => {
+const BadgeBase = ({ children, badgeType = 'basic', className, ...props }: BadgeProps) => {
   const badgeCN = classNames(styles['badge'], styles[badgeType], className);
   return (
     <button {...props} className={badgeCN}>
@@ -23,9 +23,17 @@ export const Badge = ({ children, badgeType = 'basic', className, ...props }: Ba
   );
 };
 
+type TBadge = typeof BadgeBase & {
+  Icon: typeof BadgeIcon;
+  Value: typeof BadgeValue;
+  displayName?: string;
+};
+
+const Badge = BadgeBase as TBadge
+
 Badge.displayName = 'Badge';
 
-Badge.Icon = BadgeIcon;
-Badge.Value = BadgeValue;
+Badge.Icon = BadgeIcon
+Badge.Value = BadgeValue
 
-
+export { Badge };

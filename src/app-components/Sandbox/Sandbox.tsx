@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Typography, Link, Avatar, AvatarGroup, Badge } from '../../library-components';
 import {BellIcon, RandomIcon} from "../../library-components/Icons";
