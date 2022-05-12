@@ -9,15 +9,13 @@ const testUrl2 = 'https://i.pinimg.com/736x/b6/0f/05/b60f05425a8191b70f3dea5a0ba
 const testUrl3 = 'https://www.meme-arsenal.com/memes/100773de10bd652a2366e129c5053a0a.jpg';
 
 
-
-
 export const Sandbox = () => {
   const [state, setState] = React.useState<boolean>(false);
   const [src, setSrc] = React.useState<string>('');
 
   const onMouseInHandler = () => console.log('onMouseInHandler');
 
-  const onAddClb = (params: string) => console.log(params);
+  const onAddClb = (params: any) => console.log(params);
 
 
   return (
