@@ -4,8 +4,8 @@ import { CameraIcon, TrashIcon } from '../Icons';
 import styles from './Avatar.module.scss';
 import {convertToBase64, filterByMIME, MIMECheckerAPI} from "../../utils/utils";
 
-type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';
-type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
+export type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';
+export type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
 
 type FileInputProps = Omit<
   React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
