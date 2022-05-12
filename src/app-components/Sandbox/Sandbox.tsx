@@ -1,5 +1,7 @@
 import React from 'react';
-import { T, L, Avatar, AvatarGroup, Badge } from '../../library-components';
+import { Typography, Link, Avatar, AvatarGroup, Badge } from '../../library-components';
+import {BellIcon, RandomIcon} from "../../library-components/Icons";
+
 
 const testUrl =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFcT0Yq1YuK-VL5ccFmjUcNov2TcTClJT4m_b3k5DD42JuZmsaFPU8PqhRUpNSHf8vRo&usqp=CAU';
@@ -24,61 +26,61 @@ export const Sandbox = () => {
     <>
       <div className={'sandbox'}>
         <h2>Typography</h2>
-        <T>
+        <Typography>
           <h1>H1</h1>
-        </T>
-        <T fontWeight={'semiBold'}>
+        </Typography>
+        <Typography fontWeight={'semiBold'}>
           <h2>H2</h2>
-        </T>
-        <T>
+        </Typography>
+        <Typography>
           <h3>H3</h3>
-        </T>
-        <T>
+        </Typography>
+        <Typography>
           <h4>H4</h4>
-        </T>
-        <T textType={'body-1'} fontWeight={'regular'}>
+        </Typography>
+        <Typography textType={'body-1'} fontWeight={'regular'}>
           <div style={{ background: 'red' }}>div</div>
-        </T>
-        <T textType={'body-2'} fontWeight={'semiBold'}>
+        </Typography>
+        <Typography textType={'body-2'} fontWeight={'semiBold'}>
           <span style={{ cursor: 'pointer' }} onClick={() => setState(!state)}>
             span
           </span>
-        </T>
-        <T textType={'body-3'} fontWeight={'medium'}>
+        </Typography>
+        <Typography textType={'body-3'} fontWeight={'medium'}>
           <a href={'#'} onMouseOver={onMouseInHandler}>
             link
           </a>
-        </T>
+        </Typography>
         <h2>Links</h2>
-        <T fontWeight={'bold'} textType={'body-1'}>
+        <Typography fontWeight={'bold'} textType={'body-1'}>
           <span>
             Some text with{' '}
-            <L>
+            <Link>
               <a href="#">very long link</a>
-            </L>
+            </Link>
           </span>
-        </T>
+        </Typography>
         <h2>Badges</h2>
         <Badge>
-          <Badge.Value textContent={333} />
+          <Badge.Value value={333} />
         </Badge>
-        {/*<Badge badgeType={'notification'}>*/}
-        {/*  <Badge.Icon>*/}
-        {/*    <RandomIcon />*/}
-        {/*  </Badge.Icon>*/}
-        {/*</Badge>*/}
-        {/*<Badge>*/}
-        {/*  <Badge.Icon>*/}
-        {/*    <BellIcon />*/}
-        {/*  </Badge.Icon>*/}
-        {/*  <Badge.Value textContent={333} />*/}
-        {/*</Badge>*/}
-        {/*<Badge badgeType={'notification'}>*/}
-        {/*  <Badge.Value textContent={14233} />*/}
-        {/*  <Badge.Icon>*/}
-        {/*    <BellIcon />*/}
-        {/*  </Badge.Icon>*/}
-        {/*</Badge>*/}
+        <Badge badgeType={'notification'}>
+          <Badge.Icon>
+            <RandomIcon />
+          </Badge.Icon>
+        </Badge>
+        <Badge>
+          <Badge.Icon>
+            <BellIcon />
+          </Badge.Icon>
+          <Badge.Value value={333} />
+        </Badge>
+        <Badge badgeType={'notification'}>
+          <Badge.Value value={14233} />
+          <Badge.Icon>
+            <BellIcon />
+          </Badge.Icon>
+        </Badge>
         <h2>Avatar</h2>
         <Avatar
           src={testUrl}
@@ -100,6 +102,7 @@ export const Sandbox = () => {
           src={''}
           type={'logo'}
           onAdd={(_e, files) => {
+            console.log(files)
             setFiles(files);
           }}
           onRemove={() => {

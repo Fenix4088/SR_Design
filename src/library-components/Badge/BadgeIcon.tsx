@@ -6,8 +6,7 @@ interface BIconProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSp
   children: JSX.Element;
 }
 
-//TODO: remove memo
-export const BIcon = React.memo(({ children: child, className, ...props }: BIconProps) => {
+export const BadgeIcon = ({ children: child, className, ...props }: BIconProps) => {
   const elementCN = classNames(styles['icon'], className);
 
   return (
@@ -15,6 +14,6 @@ export const BIcon = React.memo(({ children: child, className, ...props }: BIcon
       {child}
     </span>
   );
-});
+};
 
-BIcon.displayName = 'Badge Icon';
+BadgeIcon.displayName = 'Badge Icon';

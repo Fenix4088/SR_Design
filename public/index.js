@@ -30452,6 +30452,18 @@
       return (React__default["default"].createElement("svg", { width: "20", height: "20", viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
           React__default["default"].createElement("path", { d: "M11.1786 14.375H11.8214C11.9067 14.375 11.9884 14.3404 12.0487 14.2789C12.109 14.2174 12.1429 14.1339 12.1429 14.0469V8.14062C12.1429 8.0536 12.109 7.97014 12.0487 7.90861C11.9884 7.84707 11.9067 7.8125 11.8214 7.8125H11.1786C11.0933 7.8125 11.0116 7.84707 10.9513 7.90861C10.891 7.97014 10.8571 8.0536 10.8571 8.14062V14.0469C10.8571 14.1339 10.891 14.2174 10.9513 14.2789C11.0116 14.3404 11.0933 14.375 11.1786 14.375ZM15.5714 5.1875H13.364L12.4533 3.63711C12.339 3.4427 12.1773 3.28183 11.984 3.17018C11.7907 3.05852 11.5724 2.99989 11.3503 3H8.64973C8.42772 2.99999 8.20948 3.05866 8.01628 3.17031C7.82307 3.28196 7.66148 3.44278 7.54723 3.63711L6.63598 5.1875H4.42857C4.31491 5.1875 4.2059 5.23359 4.12553 5.31564C4.04515 5.39769 4 5.50897 4 5.625V6.0625C4 6.17853 4.04515 6.28981 4.12553 6.37186C4.2059 6.45391 4.31491 6.5 4.42857 6.5H4.85714V15.6875C4.85714 16.0356 4.9926 16.3694 5.23372 16.6156C5.47484 16.8617 5.80186 17 6.14286 17H13.8571C14.1981 17 14.5252 16.8617 14.7663 16.6156C15.0074 16.3694 15.1429 16.0356 15.1429 15.6875V6.5H15.5714C15.6851 6.5 15.7941 6.45391 15.8745 6.37186C15.9548 6.28981 16 6.17853 16 6.0625V5.625C16 5.50897 15.9548 5.39769 15.8745 5.31564C15.7941 5.23359 15.6851 5.1875 15.5714 5.1875ZM8.60286 4.39207C8.61718 4.36773 8.63745 4.34761 8.66167 4.33366C8.6859 4.31971 8.71326 4.31242 8.74107 4.3125H11.2589C11.2867 4.31247 11.314 4.31978 11.3382 4.33373C11.3624 4.34767 11.3826 4.36777 11.3969 4.39207L11.8646 5.1875H8.13545L8.60286 4.39207ZM13.8571 15.6875H6.14286V6.5H13.8571V15.6875ZM8.17857 14.375H8.82143C8.90668 14.375 8.98843 14.3404 9.04871 14.2789C9.10899 14.2174 9.14286 14.1339 9.14286 14.0469V8.14062C9.14286 8.0536 9.10899 7.97014 9.04871 7.90861C8.98843 7.84707 8.90668 7.8125 8.82143 7.8125H8.17857C8.09332 7.8125 8.01157 7.84707 7.95129 7.90861C7.89101 7.97014 7.85714 8.0536 7.85714 8.14062V14.0469C7.85714 14.1339 7.89101 14.2174 7.95129 14.2789C8.01157 14.3404 8.09332 14.375 8.17857 14.375Z", fill: "white" })));
   };
+  var RandomIcon = function () {
+      return (React__default["default"].createElement("svg", { width: "32", height: "32", viewBox: "0 0 32 32", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+          React__default["default"].createElement("path", { d: "M10.3094 8.4C8.85959 8.4 7.68436 9.4746 7.68436 10.8C7.68436 12.1254 8.85959 13.2 10.3094 13.2C11.7591 13.2 12.9344 12.1254 12.9344 10.8C12.9344 9.4746 11.7591 8.4 10.3094 8.4ZM26.4961 4H5.49609C3.56311 4 1.99609 5.4326 1.99609 7.2V23.2C1.99609 24.9673 3.56311 26.4 5.49609 26.4H26.4961C28.4292 26.4 29.9961 24.9673 29.9961 23.2V7.2C29.9961 5.4326 28.4292 4 26.4961 4ZM27.3711 22.8651L19.8914 13.5689C19.706 13.3384 19.3938 13.2 19.0594 13.2C18.725 13.2 18.4128 13.3384 18.2274 13.5689L12.3958 20.8169L10.3673 18.5118C10.1791 18.2978 9.8788 18.1714 9.55943 18.1714C9.23995 18.1714 8.9396 18.2978 8.75137 18.5118L4.62208 23.2042C4.62208 23.2027 4.62109 23.2014 4.62109 23.2V7.2C4.62109 6.7589 5.01364 6.4 5.49609 6.4H26.4961C26.9785 6.4 27.3711 6.7589 27.3711 7.2V22.8651Z", fill: "#000C37" })));
+  };
+  var BellIcon = function () {
+      return (React__default["default"].createElement("svg", { width: "11", height: "13", viewBox: "0 0 11 13", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+          React__default["default"].createElement("g", { "clip-path": "url(#clip0_4483_902)" },
+              React__default["default"].createElement("path", { d: "M5.49931 12.5714C6.36655 12.5714 7.07001 11.868 7.07001 11H3.92862C3.92862 11.868 4.63208 12.5714 5.49931 12.5714ZM10.7879 8.89551C10.3135 8.38578 9.42592 7.61897 9.42592 5.10714C9.42592 3.19933 8.08824 1.6721 6.28454 1.29741V0.785714C6.28454 0.351853 5.93293 0 5.49931 0C5.0657 0 4.71409 0.351853 4.71409 0.785714V1.29741C2.91039 1.6721 1.57271 3.19933 1.57271 5.10714C1.57271 7.61897 0.685096 8.38578 0.210721 8.89551C0.0633999 9.05388 -0.00191261 9.24319 -0.000684928 9.42857C0.00201596 9.83125 0.31802 10.2143 0.787485 10.2143H10.2111C10.6806 10.2143 10.9969 9.83125 10.9993 9.42857C11.0005 9.24319 10.9352 9.05364 10.7879 8.89551Z", fill: "white" })),
+          React__default["default"].createElement("defs", null,
+              React__default["default"].createElement("clipPath", { id: "clip0_4483_902" },
+                  React__default["default"].createElement("rect", { width: "11", height: "12.5714", fill: "white" })))));
+  };
 
   function styleInject(css, ref) {
     if ( ref === void 0 ) ref = {};
@@ -30484,8 +30496,30 @@
   var styles$5 = {"wrapper":"wrapper--Avatar--kAv","online-indicator":"online-indicator--Avatar--kvl","avatar":"avatar--Avatar--HE9","image":"image--Avatar--1IP","logo":"logo--Avatar--IEN","huge":"huge--Avatar----4","name":"name--Avatar--cv4","large":"large--Avatar--oaL","middle":"middle--Avatar---Fl","small":"small--Avatar--SQX","super-small":"super-small--Avatar--uJC","tiny":"tiny--Avatar--TUp","control-panel":"control-panel--Avatar---t1","control-btn-wrapper":"control-btn-wrapper--Avatar--bhQ","add-btn":"add-btn--Avatar--SuF","remove-btn":"remove-btn--Avatar---0-","new-year":"new-year--Avatar--Bff","birthday":"birthday--Avatar--5VP","extrovert":"extrovert--Avatar--bjd","introvert":"introvert--Avatar--79x"};
   styleInject(css_248z$6);
 
+  var compose = function () {
+      var fns = [];
+      for (var _i = 0; _i < arguments.length; _i++) {
+          fns[_i] = arguments[_i];
+      }
+      return function () {
+          var args = [];
+          for (var _i = 0; _i < arguments.length; _i++) {
+              args[_i] = arguments[_i];
+          }
+          return fns.reduce(function (value, func) { return func(value); }, args);
+      };
+  };
+  var filterByMIME = function (files, predicate) {
+      return Array.from(files).filter(function (file) { return predicate(file.type); });
+  };
+  var MIMECheckerAPI = {
+      checkImageMIMEType: function (str) { return /image\/jpeg|png/.test(str); },
+      checkExcelMIMEType: function (str) { return /vdn\.(ms-excel|openxmlformats)/.test(str); },
+  };
+
   var Avatar = function (_a) {
-      var size = _a.size, src = _a.src, _b = _a.isOnline, isOnline = _b === void 0 ? false : _b, color = _a.color, type = _a.type, className = _a.className, userName = _a.userName, onAdd = _a.onAdd, onRemove = _a.onRemove, value = _a.value, fileInputHtmlProps = _a.fileInputHtmlProps, wrapperClassName = _a.wrapperClassName, wrapperStyles = _a.wrapperStyles, props = __rest(_a, ["size", "src", "isOnline", "color", "type", "className", "userName", "onAdd", "onRemove", "value", "fileInputHtmlProps", "wrapperClassName", "wrapperStyles"]);
+      var size = _a.size, src = _a.src, _b = _a.isOnline, isOnline = _b === void 0 ? false : _b, color = _a.color, type = _a.type, className = _a.className, userName = _a.userName, onAdd = _a.onAdd, onRemove = _a.onRemove, value = _a.value, _c = _a.fileInputHtmlProps, fileInputHtmlProps = _c === void 0 ? {} : _c, wrapperClassName = _a.wrapperClassName, wrapperStyles = _a.wrapperStyles, props = __rest(_a, ["size", "src", "isOnline", "color", "type", "className", "userName", "onAdd", "onRemove", "value", "fileInputHtmlProps", "wrapperClassName", "wrapperStyles"]);
+      var defaultFileInputProps = __assign({ accept: 'image/png, image/jpeg', multiply: false }, fileInputHtmlProps);
       var avatarCN = classNames__default["default"](styles$5['avatar'], styles$5[size], styles$5[color], className);
       var logoCN = classNames__default["default"](styles$5['avatar'], styles$5['logo'], styles$5['huge'], className);
       var wrapperCN = classNames__default["default"](styles$5['wrapper'], wrapperClassName);
@@ -30495,18 +30529,19 @@
       var userNameNodeContent = isLogoType ? 'Add logo' : userNameFirstLetter;
       var isControlPanelVisible = isLogoType || size === 'huge';
       var onAddHandler = function (e) {
-          //TODO: make method required
-          onAdd === null || onAdd === void 0 ? void 0 : onAdd(e, e.currentTarget.files);
+          var files = e.currentTarget.files;
+          if (!files)
+              return;
+          onAdd === null || onAdd === void 0 ? void 0 : onAdd(e, filterByMIME(files, MIMECheckerAPI.checkImageMIMEType));
       };
       var onRemoveHandler = function (e) {
-          //TODO: make method required
           onRemove === null || onRemove === void 0 ? void 0 : onRemove(e);
       };
       var avatarContent = src ? (React__default["default"].createElement("img", { className: styles$5['image'], src: src, alt: "Avatar" })) : (React__default["default"].createElement("div", { className: styles$5['name'] }, userNameNodeContent));
       var controlPanel = isControlPanelVisible ? (React__default["default"].createElement("div", { className: styles$5['control-panel'] },
           React__default["default"].createElement("div", { className: styles$5['control-btn-wrapper'] },
               React__default["default"].createElement("label", { className: styles$5['add-btn'] },
-                  React__default["default"].createElement("input", __assign({}, fileInputHtmlProps, { value: value, type: "file", onChange: onAddHandler })),
+                  React__default["default"].createElement("input", __assign({}, defaultFileInputProps, { value: value, type: "file", onChange: onAddHandler })),
                   React__default["default"].createElement(CameraIcon, null)),
               src && (React__default["default"].createElement("span", { className: styles$5['remove-btn'], onClick: onRemoveHandler },
                   React__default["default"].createElement(TrashIcon, null)))))) : null;
@@ -30525,20 +30560,6 @@
   var css_248z$5 = ".avatar-group-wrapper--AvatarGroup--Zan {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: row nowrap;\n}\n.avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.small--AvatarGroup--dWR, .avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.super-small--AvatarGroup--tqx, .avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.tiny--AvatarGroup--pWC {\n  border-radius: 50%;\n  font-weight: 600;\n  color: #000;\n  background: #e0e4ec;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: row nowrap;\n}\n.avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.small--AvatarGroup--dWR {\n  width: calc(4 * var(--rem-base));\n  height: calc(4 * var(--rem-base));\n  font-size: calc(1.3 * var(--rem-base));\n}\n.avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.super-small--AvatarGroup--tqx {\n  width: calc(3.2 * var(--rem-base));\n  height: calc(3.2 * var(--rem-base));\n  font-size: calc(1 * var(--rem-base));\n}\n.avatar-group-wrapper--AvatarGroup--Zan .avatar-count--AvatarGroup--um9.tiny--AvatarGroup--pWC {\n  width: calc(2.4 * var(--rem-base));\n  height: calc(2.4 * var(--rem-base));\n  font-size: calc(0.8 * var(--rem-base));\n}\n.avatar-group-wrapper--AvatarGroup--Zan > *:not(.avatar-count--AvatarGroup--um9) {\n  position: relative;\n}\n.avatar-group-wrapper--AvatarGroup--Zan > *:not(.avatar-count--AvatarGroup--um9)::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 115%;\n  height: 115%;\n  background: #fff;\n  border-radius: 50%;\n  transform: translate(-6%, -7%);\n}";
   var styles$4 = {"avatar-group-wrapper":"avatar-group-wrapper--AvatarGroup--Zan","avatar-count":"avatar-count--AvatarGroup--um9","small":"small--AvatarGroup--dWR","super-small":"super-small--AvatarGroup--tqx","tiny":"tiny--AvatarGroup--pWC"};
   styleInject(css_248z$5);
-
-  var compose = function () {
-      var fns = [];
-      for (var _i = 0; _i < arguments.length; _i++) {
-          fns[_i] = arguments[_i];
-      }
-      return function () {
-          var args = [];
-          for (var _i = 0; _i < arguments.length; _i++) {
-              args[_i] = arguments[_i];
-          }
-          return fns.reduce(function (value, func) { return func(value); }, args);
-      };
-  };
 
   var spliceAvatarsToIndex = function (avatars) {
       if (avatars[0].length <= avatars[1])
@@ -30601,35 +30622,31 @@
       }
       return '' + num;
   };
-  //TODO: remove memo
-  var BValue = React__default["default"].memo(function (_a) {
-      var textContent = _a.textContent, className = _a.className;
-      var formatTextContent = React__default["default"].useMemo(function () {
-          return numFormatter(textContent);
-      }, [textContent]);
+  var BadgeValue = React__default["default"].memo(function (_a) {
+      var value = _a.value, className = _a.className;
+      var formatValue = React__default["default"].useMemo(function () {
+          return numFormatter(value);
+      }, [value]);
       var elementCN = classNames__default["default"](styles$3['value'], className);
-      return React__default["default"].createElement("span", { className: elementCN }, formatTextContent);
+      return React__default["default"].createElement("span", { className: elementCN }, formatValue);
   });
-  BValue.displayName = 'Badge Value';
+  BadgeValue.displayName = 'Badge Value';
 
-  //TODO: remove memo
-  var BIcon = React__default["default"].memo(function (_a) {
+  var BadgeIcon = function (_a) {
       var child = _a.children, className = _a.className, props = __rest(_a, ["children", "className"]);
       var elementCN = classNames__default["default"](styles$3['icon'], className);
       return (React__default["default"].createElement("span", __assign({}, props, { className: elementCN }), child));
-  });
-  BIcon.displayName = 'Badge Icon';
+  };
+  BadgeIcon.displayName = 'Badge Icon';
 
-  //TODO: remove memoization
-  var BadgeBase = React__default["default"].memo(function (_a) {
+  var Badge = function (_a) {
       var children = _a.children, _b = _a.badgeType, badgeType = _b === void 0 ? 'basic' : _b, className = _a.className, props = __rest(_a, ["children", "badgeType", "className"]);
       var badgeCN = classNames__default["default"](styles$3['badge'], styles$3[badgeType], className);
       return (React__default["default"].createElement("button", __assign({}, props, { className: badgeCN }), children));
-  });
-  var Badge = BadgeBase;
+  };
   Badge.displayName = 'Badge';
-  Badge.Icon = BIcon;
-  Badge.Value = BValue;
+  Badge.Icon = BadgeIcon;
+  Badge.Value = BadgeValue;
 
   var css_248z$3 = "";
   var styles$2 = {};
@@ -30641,21 +30658,21 @@
   });
   Button.displayName = 'Button';
 
-  var css_248z$2 = ".link--L--UxY {\n  position: relative;\n  color: #000c37;\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n  font-weight: 500;\n  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);\n}\n.link--L--UxY::before, .link--L--UxY::after {\n  position: absolute;\n  content: \"\";\n  left: 0;\n  bottom: -0.1rem;\n  display: block;\n  width: 100%;\n  height: 2px;\n  background: #000c37;\n  transition: 1.1s var(--ease-out-expo);\n}\n.link--L--UxY::before {\n  transform: scaleX(0);\n  transform-origin: left;\n}\n.link--L--UxY::after {\n  transform-origin: right;\n  transition-delay: 0.25s;\n}\n.link--L--UxY:hover::before {\n  transform: scaleX(1);\n  transition-delay: 0.25s;\n}\n.link--L--UxY:hover::after {\n  transform: scaleX(0);\n  transition-delay: 0s;\n}\n.link--L--UxY:focus {\n  outline: #0088ff solid 2px;\n  border-radius: 6px;\n}";
-  var styles$1 = {"link":"link--L--UxY"};
+  var css_248z$2 = ".link--Link--Coy {\n  position: relative;\n  color: #000c37;\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n  font-weight: 500;\n  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);\n}\n.link--Link--Coy::before, .link--Link--Coy::after {\n  position: absolute;\n  content: \"\";\n  left: 0;\n  bottom: -0.1rem;\n  display: block;\n  width: 100%;\n  height: 2px;\n  background: #000c37;\n  transition: 1.1s var(--ease-out-expo);\n}\n.link--Link--Coy::before {\n  transform: scaleX(0);\n  transform-origin: left;\n}\n.link--Link--Coy::after {\n  transform-origin: right;\n  transition-delay: 0.25s;\n}\n.link--Link--Coy:hover::before {\n  transform: scaleX(1);\n  transition-delay: 0.25s;\n}\n.link--Link--Coy:hover::after {\n  transform: scaleX(0);\n  transition-delay: 0s;\n}\n.link--Link--Coy:focus {\n  outline: #0088ff solid 2px;\n  border-radius: 6px;\n}";
+  var styles$1 = {"link":"link--Link--Coy"};
   styleInject(css_248z$2);
 
-  var L = function (_a) {
+  var Link = function (_a) {
       var child = _a.children;
       if (child.type !== 'a') {
-          throw new Error("L component should have a link tag type as a child");
+          throw new Error("Link component should have a link tag type as a child");
       }
       var _b = child.props, className = _b.className, restProps = __rest(_b, ["className"]);
-      return (React__default["default"].createElement(React__default["default"].Fragment, null, React__default["default"].cloneElement(child, __assign({ className: classNames__default["default"](className, styles$1['link']) }, restProps))));
+      return React__default["default"].cloneElement(child, __assign({ className: classNames__default["default"](className, styles$1['link']) }, restProps));
   };
 
-  var css_248z$1 = "/*\n @desc media query mixin @param $viewport - viewport of the screen @param $practice - MF - mobile first styles, DF - desktop first styles */\n.h1--T--3QU,\n.h2--T--3rA,\n.h3--T--BrT,\n.h4--T--gzb,\n.h5--T--AGb,\n.h6--T--YJh,\n.body-1--T--aDL,\n.body-2--T--Qn7,\n.body-3--T--xrH,\n.captions--T--MiT,\n.overline--T--dyn {\n  color: #000c37;\n}\n.h1--T--3QU.semiBold--T--ic4,\n.h2--T--3rA.semiBold--T--ic4,\n.h3--T--BrT.semiBold--T--ic4,\n.h4--T--gzb.semiBold--T--ic4,\n.h5--T--AGb.semiBold--T--ic4,\n.h6--T--YJh.semiBold--T--ic4,\n.body-1--T--aDL.semiBold--T--ic4,\n.body-2--T--Qn7.semiBold--T--ic4,\n.body-3--T--xrH.semiBold--T--ic4,\n.captions--T--MiT.semiBold--T--ic4,\n.overline--T--dyn.semiBold--T--ic4 {\n  font-weight: 600;\n}\n.h1--T--3QU.bold--T--pT8,\n.h2--T--3rA.bold--T--pT8,\n.h3--T--BrT.bold--T--pT8,\n.h4--T--gzb.bold--T--pT8,\n.h5--T--AGb.bold--T--pT8,\n.h6--T--YJh.bold--T--pT8,\n.body-1--T--aDL.bold--T--pT8,\n.body-2--T--Qn7.bold--T--pT8,\n.body-3--T--xrH.bold--T--pT8,\n.captions--T--MiT.bold--T--pT8,\n.overline--T--dyn.bold--T--pT8 {\n  font-weight: 700;\n}\n\n.body-1--T--aDL.regular--T--izS,\n.body-2--T--Qn7.regular--T--izS,\n.body-3--T--xrH.regular--T--izS,\n.captions--T--MiT.regular--T--izS,\n.overline--T--dyn.regular--T--izS {\n  font-weight: 400;\n}\n.body-1--T--aDL.medium--T---2k,\n.body-2--T--Qn7.medium--T---2k,\n.body-3--T--xrH.medium--T---2k,\n.captions--T--MiT.medium--T---2k,\n.overline--T--dyn.medium--T---2k {\n  font-weight: 500;\n}\n\n.h1--T--3QU {\n  font-size: calc(5.4 * var(--rem-base));\n  line-height: calc(6 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h1--T--3QU {\n    font-size: calc(5.4 * var(--rem-base));\n    line-height: calc(7.2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h1--T--3QU {\n    font-size: calc(7.2 * var(--rem-base));\n    line-height: calc(8.4 * var(--rem-base));\n  }\n}\n\n.h2--T--3rA {\n  font-size: calc(2.4 * var(--rem-base));\n  line-height: calc(3.4 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h2--T--3rA {\n    font-size: calc(4.4 * var(--rem-base));\n    line-height: calc(5.4 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h2--T--3rA {\n    font-size: calc(4.8 * var(--rem-base));\n    line-height: calc(6 * var(--rem-base));\n  }\n}\n\n.h3--T--BrT {\n  font-size: calc(2.2 * var(--rem-base));\n  line-height: calc(3.2 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h3--T--BrT {\n    font-size: calc(3.2 * var(--rem-base));\n    line-height: calc(4.2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h3--T--BrT {\n    font-size: calc(3.6 * var(--rem-base));\n    line-height: calc(4.6 * var(--rem-base));\n  }\n}\n\n.h4--T--gzb {\n  font-size: calc(1.8 * var(--rem-base));\n  line-height: calc(2.8 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h4--T--gzb {\n    font-size: calc(2 * var(--rem-base));\n    line-height: calc(3 * var(--rem-base));\n  }\n}\n\n.h5--T--AGb {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h5--T--AGb {\n    font-size: calc(1.8 * var(--rem-base));\n    line-height: calc(2.8 * var(--rem-base));\n  }\n}\n\n.h6--T--YJh {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n\n.body-1--T--aDL {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n\n.body-2--T--Qn7 {\n  font-size: calc(1.4 * var(--rem-base));\n  line-height: calc(2.2 * var(--rem-base));\n}\n\n.body-3--T--xrH {\n  font-size: calc(1.2 * var(--rem-base));\n  line-height: calc(2 * var(--rem-base));\n}\n\n.captions--T--MiT {\n  font-size: calc(1 * var(--rem-base));\n  line-height: calc(1.2 * var(--rem-base));\n}\n\n.overline--T--dyn {\n  font-size: calc(1 * var(--rem-base));\n  line-height: calc(1.2 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .overline--T--dyn {\n    font-size: calc(1.2 * var(--rem-base));\n    line-height: calc(2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .overline--T--dyn {\n    font-size: calc(1.4 * var(--rem-base));\n    line-height: calc(2.2 * var(--rem-base));\n  }\n}";
-  var styles = {"h1":"h1--T--3QU","h2":"h2--T--3rA","h3":"h3--T--BrT","h4":"h4--T--gzb","h5":"h5--T--AGb","h6":"h6--T--YJh","body-1":"body-1--T--aDL","body-2":"body-2--T--Qn7","body-3":"body-3--T--xrH","captions":"captions--T--MiT","overline":"overline--T--dyn","semiBold":"semiBold--T--ic4","bold":"bold--T--pT8","regular":"regular--T--izS","medium":"medium--T---2k"};
+  var css_248z$1 = "/*\n @desc media query mixin @param $viewport - viewport of the screen @param $practice - MF - mobile first styles, DF - desktop first styles */\n.h1--Typography--VRR,\n.h2--Typography--MVk,\n.h3--Typography--Exo,\n.h4--Typography--ukr,\n.h5--Typography--X9-,\n.h6--Typography--B0R,\n.body-1--Typography--15a,\n.body-2--Typography--YdE,\n.body-3--Typography--DGl,\n.captions--Typography--Dyn,\n.overline--Typography--b3j {\n  color: #000c37;\n}\n.h1--Typography--VRR.semiBold--Typography--wvI,\n.h2--Typography--MVk.semiBold--Typography--wvI,\n.h3--Typography--Exo.semiBold--Typography--wvI,\n.h4--Typography--ukr.semiBold--Typography--wvI,\n.h5--Typography--X9-.semiBold--Typography--wvI,\n.h6--Typography--B0R.semiBold--Typography--wvI,\n.body-1--Typography--15a.semiBold--Typography--wvI,\n.body-2--Typography--YdE.semiBold--Typography--wvI,\n.body-3--Typography--DGl.semiBold--Typography--wvI,\n.captions--Typography--Dyn.semiBold--Typography--wvI,\n.overline--Typography--b3j.semiBold--Typography--wvI {\n  font-weight: 600;\n}\n.h1--Typography--VRR.bold--Typography--jvw,\n.h2--Typography--MVk.bold--Typography--jvw,\n.h3--Typography--Exo.bold--Typography--jvw,\n.h4--Typography--ukr.bold--Typography--jvw,\n.h5--Typography--X9-.bold--Typography--jvw,\n.h6--Typography--B0R.bold--Typography--jvw,\n.body-1--Typography--15a.bold--Typography--jvw,\n.body-2--Typography--YdE.bold--Typography--jvw,\n.body-3--Typography--DGl.bold--Typography--jvw,\n.captions--Typography--Dyn.bold--Typography--jvw,\n.overline--Typography--b3j.bold--Typography--jvw {\n  font-weight: 700;\n}\n\n.body-1--Typography--15a.regular--Typography--mHG,\n.body-2--Typography--YdE.regular--Typography--mHG,\n.body-3--Typography--DGl.regular--Typography--mHG,\n.captions--Typography--Dyn.regular--Typography--mHG,\n.overline--Typography--b3j.regular--Typography--mHG {\n  font-weight: 400;\n}\n.body-1--Typography--15a.medium--Typography--7vL,\n.body-2--Typography--YdE.medium--Typography--7vL,\n.body-3--Typography--DGl.medium--Typography--7vL,\n.captions--Typography--Dyn.medium--Typography--7vL,\n.overline--Typography--b3j.medium--Typography--7vL {\n  font-weight: 500;\n}\n\n.h1--Typography--VRR {\n  font-size: calc(5.4 * var(--rem-base));\n  line-height: calc(6 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h1--Typography--VRR {\n    font-size: calc(5.4 * var(--rem-base));\n    line-height: calc(7.2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h1--Typography--VRR {\n    font-size: calc(7.2 * var(--rem-base));\n    line-height: calc(8.4 * var(--rem-base));\n  }\n}\n\n.h2--Typography--MVk {\n  font-size: calc(2.4 * var(--rem-base));\n  line-height: calc(3.4 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h2--Typography--MVk {\n    font-size: calc(4.4 * var(--rem-base));\n    line-height: calc(5.4 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h2--Typography--MVk {\n    font-size: calc(4.8 * var(--rem-base));\n    line-height: calc(6 * var(--rem-base));\n  }\n}\n\n.h3--Typography--Exo {\n  font-size: calc(2.2 * var(--rem-base));\n  line-height: calc(3.2 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h3--Typography--Exo {\n    font-size: calc(3.2 * var(--rem-base));\n    line-height: calc(4.2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .h3--Typography--Exo {\n    font-size: calc(3.6 * var(--rem-base));\n    line-height: calc(4.6 * var(--rem-base));\n  }\n}\n\n.h4--Typography--ukr {\n  font-size: calc(1.8 * var(--rem-base));\n  line-height: calc(2.8 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h4--Typography--ukr {\n    font-size: calc(2 * var(--rem-base));\n    line-height: calc(3 * var(--rem-base));\n  }\n}\n\n.h5--Typography--X9- {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .h5--Typography--X9- {\n    font-size: calc(1.8 * var(--rem-base));\n    line-height: calc(2.8 * var(--rem-base));\n  }\n}\n\n.h6--Typography--B0R {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n\n.body-1--Typography--15a {\n  font-size: calc(1.6 * var(--rem-base));\n  line-height: calc(2.6 * var(--rem-base));\n}\n\n.body-2--Typography--YdE {\n  font-size: calc(1.4 * var(--rem-base));\n  line-height: calc(2.2 * var(--rem-base));\n}\n\n.body-3--Typography--DGl {\n  font-size: calc(1.2 * var(--rem-base));\n  line-height: calc(2 * var(--rem-base));\n}\n\n.captions--Typography--Dyn {\n  font-size: calc(1 * var(--rem-base));\n  line-height: calc(1.2 * var(--rem-base));\n}\n\n.overline--Typography--b3j {\n  font-size: calc(1 * var(--rem-base));\n  line-height: calc(1.2 * var(--rem-base));\n}\n@media (min-width: 768px) {\n  .overline--Typography--b3j {\n    font-size: calc(1.2 * var(--rem-base));\n    line-height: calc(2 * var(--rem-base));\n  }\n}\n@media (min-width: 1170px) {\n  .overline--Typography--b3j {\n    font-size: calc(1.4 * var(--rem-base));\n    line-height: calc(2.2 * var(--rem-base));\n  }\n}";
+  var styles = {"h1":"h1--Typography--VRR","h2":"h2--Typography--MVk","h3":"h3--Typography--Exo","h4":"h4--Typography--ukr","h5":"h5--Typography--X9-","h6":"h6--Typography--B0R","body-1":"body-1--Typography--15a","body-2":"body-2--Typography--YdE","body-3":"body-3--Typography--DGl","captions":"captions--Typography--Dyn","overline":"overline--Typography--b3j","semiBold":"semiBold--Typography--wvI","bold":"bold--Typography--jvw","regular":"regular--Typography--mHG","medium":"medium--Typography--7vL"};
   styleInject(css_248z$1);
 
   var componentStyles = {
@@ -30686,7 +30703,7 @@
           }
       }
   };
-  var T = function (_a) {
+  var Typography = function (_a) {
       var _b = _a.fontWeight, fontWeight = _b === void 0 ? 'bold' : _b, textType = _a.textType, child = _a.children;
       if (typeof child.type !== 'string') {
           return React__default["default"].createElement(React__default["default"].Fragment, null, child);
@@ -30700,6 +30717,7 @@
       var _c = child.props, className = _c.className, restProps = __rest(_c, ["className"]);
       return React__default["default"].cloneElement(child, __assign({ className: classNames__default["default"]("".concat(componentStyles[getElementType(child.type, textType)], " ").concat(styles[fontWeight]), className) }, restProps));
   };
+  Typography.displayName = 'Typography';
 
   var testUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFcT0Yq1YuK-VL5ccFmjUcNov2TcTClJT4m_b3k5DD42JuZmsaFPU8PqhRUpNSHf8vRo&usqp=CAU';
   var testUrl2 = 'https://i.pinimg.com/736x/b6/0f/05/b60f05425a8191b70f3dea5a0ba893c7.jpg';
@@ -30713,30 +30731,41 @@
       return (React__default["default"].createElement(React__default["default"].Fragment, null,
           React__default["default"].createElement("div", { className: 'sandbox' },
               React__default["default"].createElement("h2", null, "Typography"),
-              React__default["default"].createElement(T, null,
+              React__default["default"].createElement(Typography, null,
                   React__default["default"].createElement("h1", null, "H1")),
-              React__default["default"].createElement(T, { fontWeight: 'semiBold' },
+              React__default["default"].createElement(Typography, { fontWeight: 'semiBold' },
                   React__default["default"].createElement("h2", null, "H2")),
-              React__default["default"].createElement(T, null,
+              React__default["default"].createElement(Typography, null,
                   React__default["default"].createElement("h3", null, "H3")),
-              React__default["default"].createElement(T, null,
+              React__default["default"].createElement(Typography, null,
                   React__default["default"].createElement("h4", null, "H4")),
-              React__default["default"].createElement(T, { textType: 'body-1', fontWeight: 'regular' },
+              React__default["default"].createElement(Typography, { textType: 'body-1', fontWeight: 'regular' },
                   React__default["default"].createElement("div", { style: { background: 'red' } }, "div")),
-              React__default["default"].createElement(T, { textType: 'body-2', fontWeight: 'semiBold' },
+              React__default["default"].createElement(Typography, { textType: 'body-2', fontWeight: 'semiBold' },
                   React__default["default"].createElement("span", { style: { cursor: 'pointer' }, onClick: function () { return setState(!state); } }, "span")),
-              React__default["default"].createElement(T, { textType: 'body-3', fontWeight: 'medium' },
+              React__default["default"].createElement(Typography, { textType: 'body-3', fontWeight: 'medium' },
                   React__default["default"].createElement("a", { href: '#', onMouseOver: onMouseInHandler }, "link")),
               React__default["default"].createElement("h2", null, "Links"),
-              React__default["default"].createElement(T, { fontWeight: 'bold', textType: 'body-1' },
+              React__default["default"].createElement(Typography, { fontWeight: 'bold', textType: 'body-1' },
                   React__default["default"].createElement("span", null,
                       "Some text with",
                       ' ',
-                      React__default["default"].createElement(L, null,
+                      React__default["default"].createElement(Link, null,
                           React__default["default"].createElement("a", { href: "#" }, "very long link")))),
               React__default["default"].createElement("h2", null, "Badges"),
               React__default["default"].createElement(Badge, null,
-                  React__default["default"].createElement(Badge.Value, { textContent: 333 })),
+                  React__default["default"].createElement(Badge.Value, { value: 333 })),
+              React__default["default"].createElement(Badge, { badgeType: 'notification' },
+                  React__default["default"].createElement(Badge.Icon, null,
+                      React__default["default"].createElement(RandomIcon, null))),
+              React__default["default"].createElement(Badge, null,
+                  React__default["default"].createElement(Badge.Icon, null,
+                      React__default["default"].createElement(BellIcon, null)),
+                  React__default["default"].createElement(Badge.Value, { value: 333 })),
+              React__default["default"].createElement(Badge, { badgeType: 'notification' },
+                  React__default["default"].createElement(Badge.Value, { value: 14233 }),
+                  React__default["default"].createElement(Badge.Icon, null,
+                      React__default["default"].createElement(BellIcon, null))),
               React__default["default"].createElement("h2", null, "Avatar"),
               React__default["default"].createElement(Avatar, { src: testUrl, isOnline: true, userName: 'Billy Milligan', type: 'avatar', size: 'huge', color: 'birthday', onAdd: function (_e, files) {
                       setFiles(files);
@@ -30746,6 +30775,7 @@
               React__default["default"].createElement(Avatar, { src: '', userName: 'Anton Milifanov', type: 'avatar', size: 'middle', color: 'introvert' }),
               React__default["default"].createElement(Avatar, { src: testUrl3, userName: 'Dima Makeev', type: 'avatar', size: 'tiny', color: 'extrovert' }),
               React__default["default"].createElement(Avatar, { src: '', type: 'logo', onAdd: function (_e, files) {
+                      console.log(files);
                       setFiles(files);
                   }, onRemove: function () {
                       setFiles([]);
@@ -30782,7 +30812,7 @@
                   React__default["default"].createElement(Avatar, __assign({}, avatarParams, { src: '', userName: 'Sam', color: 'extrovert' })))); }))));
   };
 
-  var css_248z = "*,\n*::after,\n*::before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n*:focus {\n  outline: none;\n}\n\nhtml,\nbody {\n  height: 100%;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nul,\nli {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}\n\nbutton,\ninput {\n  outline: none;\n}\n\nbutton {\n  cursor: pointer;\n}\n\ntextarea {\n  resize: none;\n}\n\nheader,\nsection,\nfooter {\n  margin: 0 auto;\n  max-width: 1920px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  padding: 0;\n  margin: 0;\n}\n\n.test {\n  font-size: 200px;\n}\n\nsvg,\nvideo {\n  display: inline-block;\n}\n\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n:root {\n  --rem-base: 10px;\n}\n\n@media (max-width: 1500px) {\n  :root {\n    --rem-base: 8px;\n  }\n}\n@media (max-width: 900px) {\n  :root {\n    --rem-base: 7.2px;\n  }\n}\n@media (max-width: 768px) {\n  :root {\n    --rem-base: 10px;\n  }\n}";
+  var css_248z = ".sandbox {\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n}\n.sandbox > * {\n  margin-bottom: 15px;\n}\n\n*,\n*::after,\n*::before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n*:focus {\n  outline: none;\n}\n\nhtml,\nbody {\n  height: 100%;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nul,\nli {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n}\n\nimg {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}\n\nbutton,\ninput {\n  outline: none;\n}\n\nbutton {\n  cursor: pointer;\n}\n\ntextarea {\n  resize: none;\n}\n\nheader,\nsection,\nfooter {\n  margin: 0 auto;\n  max-width: 1920px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  padding: 0;\n  margin: 0;\n}\n\n.test {\n  font-size: 200px;\n}\n\nsvg,\nvideo {\n  display: inline-block;\n}\n\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n:root {\n  --rem-base: 10px;\n}\n\n@media (max-width: 1500px) {\n  :root {\n    --rem-base: 8px;\n  }\n}\n@media (max-width: 900px) {\n  :root {\n    --rem-base: 7.2px;\n  }\n}\n@media (max-width: 768px) {\n  :root {\n    --rem-base: 10px;\n  }\n}";
   styleInject(css_248z);
 
   function App() {

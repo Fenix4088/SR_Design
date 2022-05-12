@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Badge.module.scss';
 import classNames from 'classnames';
-import { BValue } from './BValue';
-import { BIcon } from './BIcon';
+import { BadgeValue } from './BadgeValue';
+import { BadgeIcon } from './BadgeIcon';
 
 /**
  * @desc Badge component should be used with BadgeIcon and BadgeValue
@@ -14,23 +14,18 @@ interface BadgeProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<
   badgeType?: 'basic' | 'notification';
 }
 
-//TODO: remove memoization
-const BadgeBase = React.memo(({ children, badgeType = 'basic', className, ...props }: BadgeProps) => {
+export const Badge = ({ children, badgeType = 'basic', className, ...props }: BadgeProps) => {
   const badgeCN = classNames(styles['badge'], styles[badgeType], className);
   return (
     <button {...props} className={badgeCN}>
       {children}
     </button>
   );
-});
-
-type TBadge = typeof BadgeBase & {
-  Icon: typeof BIcon;
-  Value: typeof BValue;
 };
 
-export const Badge = BadgeBase as TBadge;
 Badge.displayName = 'Badge';
 
-Badge.Icon = BIcon;
-Badge.Value = BValue;
+Badge.Icon = BadgeIcon;
+Badge.Value = BadgeValue;
+
+

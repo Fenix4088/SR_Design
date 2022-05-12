@@ -1,36 +1,38 @@
 import React from 'react';
-import styles from './T.module.scss';
+import styles from './Typography.module.scss';
 import classNames from 'classnames';
 import { PickFromType } from '../../types/generics';
 import { warning } from '../../utils/helpers';
 
-type TStyles = {
+type TypographyStyles = {
   [K in string]: string;
 };
 
 type TextType = 'body-1' | 'body-2' | 'body-3' | 'captions' | 'overline';
 type FontWeight = 'regular' | 'medium' | 'bold' | 'semiBold';
 
-interface TProps {
+interface TypographyProps {
   children: JSX.Element;
 }
 
-interface Headers extends TProps {
+interface Headers extends TypographyProps {
   fontWeight?: PickFromType<FontWeight, 'bold' | 'semiBold'>;
 }
 
-interface SimpleText extends TProps {
+interface SimpleText extends TypographyProps {
   textType: TextType;
   fontWeight: FontWeight;
 }
 
-interface TOverload {
+interface Overload {
   (props: SimpleText): JSX.Element;
 
   (props: Headers): JSX.Element;
+
+  displayName?: string;
 }
 
-const componentStyles: TStyles = {
+const componentStyles: TypographyStyles = {
   h1: styles['h1'],
   h2: styles['h2'],
   h3: styles['h3'],
@@ -60,7 +62,7 @@ export const getElementType = (elementType: string, textType: TextType): string 
   }
 };
 
-export const T: TOverload = ({ fontWeight = 'bold', textType, children: child }: any) => {
+export const Typography: Overload = ({ fontWeight = 'bold', textType, children: child }: any) => {
   if (typeof child.type !== 'string') {
     return <>{child}</>;
   }
@@ -80,3 +82,5 @@ export const T: TOverload = ({ fontWeight = 'bold', textType, children: child }:
     ...restProps,
   });
 };
+
+Typography.displayName = 'Typography';

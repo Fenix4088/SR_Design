@@ -1,24 +1,21 @@
 import React from 'react';
-import styles from './L.module.scss';
+import styles from './Link.module.scss';
 import classNames from 'classnames';
 
-interface LProps {
+interface LinkProps {
   children: JSX.Element;
 }
 
-export const L = ({ children: child }: LProps) => {
+export const Link = ({ children: child }: LinkProps) => {
   if (child.type !== 'a') {
-    throw new Error(`L component should have a link tag type as a child`);
+    throw new Error(`Link component should have a link tag type as a child`);
   }
 
   const { className, ...restProps } = child.props;
 
-  return (
-    <>
-      {React.cloneElement(child, {
+  return React.cloneElement(child, {
         className: classNames(className, styles['link']),
         ...restProps,
-      })}
-    </>
+      }
   );
 };

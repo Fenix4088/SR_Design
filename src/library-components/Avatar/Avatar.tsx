@@ -2,9 +2,15 @@ import React, { CSSProperties } from 'react';
 import classNames from 'classnames';
 import { CameraIcon, TrashIcon } from '../Icons';
 import styles from './Avatar.module.scss';
+import {filterByMIME, MIMECheckerAPI} from "../../utils/utils";
 
 type Size = 'huge' | 'large' | 'middle' | 'small' | 'super-small' | 'tiny';
 type Color = 'new-year' | 'birthday' | 'extrovert' | 'introvert';
+
+type FileInputProps = Omit<
+  React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+  'value' | 'onChange' | 'type' | 'multiple' | 'accept'
+  >
 
 type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'color'> & {
   src: string;
@@ -14,12 +20,9 @@ type AvatarBase = Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivEleme
 
 type AvatarControls = {
   value?: File[];
-  onAdd?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void;
-  onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
-  fileInputHtmlProps?: Omit<
-    React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
-    'value' | 'onChange'
-  >;
+  onAdd: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, files: File[]) => void;
+  onRemove: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
+  fileInputHtmlProps?: FileInputProps;
 };
 
 type AvatarProps = AvatarBase & {
@@ -59,11 +62,18 @@ export const Avatar: Overload = ({
   onAdd,
   onRemove,
   value,
-  fileInputHtmlProps,
+  fileInputHtmlProps = {},
   wrapperClassName,
   wrapperStyles,
   ...props
 }: any) => {
+
+  const defaultFileInputProps: FileInputProps = {
+    accept: 'image/png, image/jpeg',
+    multiply: false,
+    ...fileInputHtmlProps
+  }
+
   const avatarCN = classNames(styles['avatar'], styles[size], styles[color], className);
   const logoCN = classNames(styles['avatar'], styles['logo'], styles['huge'], className);
   const wrapperCN = classNames(styles['wrapper'], wrapperClassName);
@@ -75,11 +85,12 @@ export const Avatar: Overload = ({
   const isControlPanelVisible = isLogoType || size === 'huge';
 
   const onAddHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    //TODO: make method required
-    onAdd?.(e, e.currentTarget.files);
+    const {files} = e.currentTarget;
+    if(!files) return;
+
+    onAdd?.(e, filterByMIME(files, MIMECheckerAPI.checkImageMIMEType));
   };
   const onRemoveHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
-    //TODO: make method required
     onRemove?.(e);
   };
 
@@ -93,7 +104,7 @@ export const Avatar: Overload = ({
     <div className={styles['control-panel']}>
       <div className={styles['control-btn-wrapper']}>
         <label className={styles['add-btn']}>
-          <input {...fileInputHtmlProps} value={value} type="file" onChange={onAddHandler} />
+          <input {...defaultFileInputProps} value={value} type="file" onChange={onAddHandler} />
           <CameraIcon />
         </label>
         {src && (
