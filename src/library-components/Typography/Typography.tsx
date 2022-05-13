@@ -9,14 +9,14 @@ type TypographyStyles = {
 };
 
 type TextType = 'body-1' | 'body-2' | 'body-3' | 'captions' | 'overline';
-type FontWeight = 'regular' | 'medium' | 'bold' | 'semiBold';
+type FontWeight = 'regular' | 'medium' | 'bold' | 'semi-bold';
 
 interface TypographyProps {
   children: JSX.Element;
 }
 
-interface Headers extends TypographyProps {
-  fontWeight?: PickFromType<FontWeight, 'bold' | 'semiBold'>;
+export interface Headers extends TypographyProps {
+  fontWeight?: PickFromType<FontWeight, 'bold' | 'semi-bold'>;
 }
 
 export interface SimpleText extends TypographyProps {
@@ -63,7 +63,6 @@ export const getElementType = (elementType: string, textType: TextType): string 
 };
 
 export const Typography: Overload = ({ fontWeight = 'bold', textType, children: child }: any) => {
-  debugger;
   if (typeof child.type !== 'string') {
     return <>{child}</>;
   }
