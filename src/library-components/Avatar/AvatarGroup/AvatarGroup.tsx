@@ -20,9 +20,9 @@ interface UseFormatAvatarGroupChildrenReturnType {
   restCount: number;
 }
 
-export const spliceAvatarsToIndex = (avatars: [JSX.Element[], number]): JSX.Element[] => {
-  if (avatars[0].length <= avatars[1]) return avatars[0];
-  return avatars[0].slice(0, avatars[1]);
+export const spliceAvatarsToIndex = ([avatars, maxIndex]: [JSX.Element[], number]): JSX.Element[] => {
+  if (avatars.length <= maxIndex) return avatars;
+  return avatars.slice(0, maxIndex);
 };
 
 export const applyZIndex = (avatars: JSX.Element[]): JSX.Element[] => {
@@ -58,10 +58,8 @@ export const useFormatAvatarGroupChildren = (
   };
 };
 
-//TODO: rename func isAvatar
-export const isSomeChildIsNotAvatar = (avatars: JSX.Element[]): boolean =>
-  //TODO: replace displayName => componentNAme
-  avatars.some((avatar: JSX.Element) => avatar.type.displayName !== AvatarName);
+export const isNotAvatar = (avatars: JSX.Element[]): boolean =>
+  avatars.some((avatar: JSX.Element) => avatar.type.componentName !== AvatarName);
 
 export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGroupProps) => {
   const avatarCountCN = classNames(styles['avatar-count'], styles[size]);
@@ -71,7 +69,7 @@ export const AvatarGroup = ({ size, children, maxDisplayedLength = 4 }: AvatarGr
 
   const isCounterVisible = maxDisplayedLength < avatarGroupChildren.length;
 
-  if (isSomeChildIsNotAvatar(avatarGroupChildren)) {
+  if (isNotAvatar(avatarGroupChildren)) {
     warning('AvatarGroup should contain just Avatar components');
     return null;
   }

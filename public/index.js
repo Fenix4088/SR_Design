@@ -30640,7 +30640,7 @@
 
   var Avatar = function (_a) {
       var size = _a.size, src = _a.src, _b = _a.isOnline, isOnline = _b === void 0 ? false : _b, color = _a.color, type = _a.type, className = _a.className, userName = _a.userName, onAdd = _a.onAdd, onRemove = _a.onRemove, value = _a.value, _c = _a.fileInputHtmlProps, fileInputHtmlProps = _c === void 0 ? {} : _c, wrapperClassName = _a.wrapperClassName, wrapperStyles = _a.wrapperStyles, props = __rest(_a, ["size", "src", "isOnline", "color", "type", "className", "userName", "onAdd", "onRemove", "value", "fileInputHtmlProps", "wrapperClassName", "wrapperStyles"]);
-      var defaultFileInputProps = __assign({ accept: 'image/png, image/jpeg', multiply: false }, fileInputHtmlProps);
+      var defaultFileInputProps = __assign({ accept: 'image/png, image/jpeg', multiple: false }, fileInputHtmlProps);
       var avatarCN = classNames__default["default"](styles$5['avatar'], styles$5[size], styles$5[color], className);
       var logoCN = classNames__default["default"](styles$5['avatar'], styles$5['logo'], styles$5['huge'], className);
       var wrapperCN = classNames__default["default"](styles$5['wrapper'], wrapperClassName);
@@ -30693,10 +30693,11 @@
   var styles$4 = {"avatar-group-wrapper":"avatar-group-wrapper--AvatarGroup--Zan","avatar-count":"avatar-count--AvatarGroup--um9","small":"small--AvatarGroup--dWR","super-small":"super-small--AvatarGroup--tqx","tiny":"tiny--AvatarGroup--pWC"};
   styleInject(css_248z$5);
 
-  var spliceAvatarsToIndex = function (avatars) {
-      if (avatars[0].length <= avatars[1])
-          return avatars[0];
-      return avatars[0].slice(0, avatars[1]);
+  var spliceAvatarsToIndex = function (_a) {
+      var avatars = _a[0], maxIndex = _a[1];
+      if (avatars.length <= maxIndex)
+          return avatars;
+      return avatars.slice(0, maxIndex);
   };
   var applyZIndex = function (avatars) {
       var zIndex = avatars.length;
@@ -30716,10 +30717,8 @@
           avatars: formattedAvatars,
       };
   };
-  //TODO: rename func isAvatar
-  var isSomeChildIsNotAvatar = function (avatars) {
-      //TODO: replace displayName => componentNAme
-      return avatars.some(function (avatar) { return avatar.type.displayName !== AvatarName; });
+  var isNotAvatar = function (avatars) {
+      return avatars.some(function (avatar) { return avatar.type.componentName !== AvatarName; });
   };
   var AvatarGroup = function (_a) {
       var size = _a.size, children = _a.children, _b = _a.maxDisplayedLength, maxDisplayedLength = _b === void 0 ? 4 : _b;
@@ -30727,7 +30726,7 @@
       var avatars = children({ type: 'avatar', size: size });
       var avatarGroupChildren = avatars.props.children;
       var isCounterVisible = maxDisplayedLength < avatarGroupChildren.length;
-      if (isSomeChildIsNotAvatar(avatarGroupChildren)) {
+      if (isNotAvatar(avatarGroupChildren)) {
           warning('AvatarGroup should contain just Avatar components');
           return null;
       }

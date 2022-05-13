@@ -76,7 +76,7 @@ export const Avatar: Overload = ({
 
   const defaultFileInputProps: FileInputProps = {
     accept: 'image/png, image/jpeg',
-    multiply: false,
+    multiple: false,
     ...fileInputHtmlProps
   }
 
