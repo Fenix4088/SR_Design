@@ -19,12 +19,12 @@ interface Headers extends TypographyProps {
   fontWeight?: PickFromType<FontWeight, 'bold' | 'semiBold'>;
 }
 
-interface SimpleText extends TypographyProps {
+export interface SimpleText extends TypographyProps {
   textType: TextType;
   fontWeight: FontWeight;
 }
 
-interface Overload {
+export interface Overload {
   (props: SimpleText): JSX.Element;
 
   (props: Headers): JSX.Element;
@@ -63,6 +63,7 @@ export const getElementType = (elementType: string, textType: TextType): string 
 };
 
 export const Typography: Overload = ({ fontWeight = 'bold', textType, children: child }: any) => {
+  debugger;
   if (typeof child.type !== 'string') {
     return <>{child}</>;
   }

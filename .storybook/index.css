@@ -1,0 +1,21 @@
+:root {
+  --rem-base: 10px;
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --rem-base: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --rem-base: 7.2px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --rem-base: 10px;
+  }
+}
