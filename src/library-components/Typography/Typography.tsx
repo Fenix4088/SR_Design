@@ -14,7 +14,6 @@ type FontWeight = 'regular' | 'medium' | 'bold' | 'semi-bold';
 interface TypographyProps {
   children: JSX.Element;
 }
-
 export interface Headers extends TypographyProps {
   fontWeight?: PickFromType<FontWeight, 'bold' | 'semi-bold'>;
 }

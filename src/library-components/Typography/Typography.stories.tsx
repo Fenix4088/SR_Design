@@ -1,18 +1,30 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import {Headers, Overload, Typography} from './Typography';
+import { Headers, Overload, Typography } from './Typography';
 
 export default {
-  title: 'Typography',
+  title: 'Components/Typography',
   component: Typography,
   argTypes: {
-      fontWeight: {
-        options: ['bold', 'semi-bold'],
-        control: {
-          type: 'radio'
+    fontWeight: {
+      description: 'Font weight of headers',
+      options: ['bold', 'semi-bold'],
+      control: {
+        type: 'radio',
+        labels: {
+          some: 'some'
         }
-      }
-  }
+      },
+    },
+    textType: {
+      table: {
+        disable: true,
+      },
+    },
+    children: {
+      description: "JSX element, should be a tag h1-h6",
+    }
+  },
 } as ComponentMeta<Overload>;
 
 const HeaderTemplate: ComponentStory<(props: Headers) => JSX.Element> = (args: Headers) => {
@@ -20,7 +32,6 @@ const HeaderTemplate: ComponentStory<(props: Headers) => JSX.Element> = (args: H
 };
 
 export const H1 = HeaderTemplate.bind({});
-
 H1.args = {
   fontWeight: 'bold',
   children: <h1>Header 1</h1>,
