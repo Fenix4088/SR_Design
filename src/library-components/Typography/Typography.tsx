@@ -60,7 +60,12 @@ export const getElementType = (elementType: string, textType: TextType): string 
     }
   }
 };
+/**
+ * Typography component it's a wrapper for JSX elements
+ * * You can not wrap a Custom component with Typography, just html jsx accepted.
+ * * You can customize Typography child however you need.
 
+ */
 export const Typography: Overload = ({ fontWeight = 'bold', textType, children: child }: any) => {
   if (typeof child.type !== 'string') {
     return <>{child}</>;

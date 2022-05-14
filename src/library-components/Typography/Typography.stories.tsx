@@ -2,28 +2,64 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Headers, Overload, Typography } from './Typography';
 
+export const headersArguments = {
+  fontWeight: {
+    type: {
+      name: 'string',
+      required: false,
+    },
+    description: 'Font weight of headers',
+    options: ['bold', 'semi-bold'],
+    control: {
+      type: 'radio',
+    },
+    table: {
+      type: {
+        summary: ['bold', 'semi-bold'],
+      },
+    },
+  },
+  textType: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    type: {
+      name: 'other',
+      value: 'JSX',
+      required: true,
+    },
+    description: 'JSX element, should be a tag h1-h6',
+    options: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
+    mapping: {
+      H1: <h1>Header 1</h1>,
+      H2: <h2>Header 2</h2>,
+      H3: <h3>Header 3</h3>,
+      H4: <h4>Header 4</h4>,
+      H5: <h5>Header 5</h5>,
+      H6: <h6>Header 6</h6>,
+    },
+    table: {
+      type: {
+        summary: 'JSX element',
+      },
+    },
+    control: { type: 'select', required: true },
+  },
+}
+
 export default {
-  title: 'Components/Typography',
+  title: 'Components/Typography/Headers',
   component: Typography,
-  argTypes: {
-    fontWeight: {
-      description: 'Font weight of headers',
-      options: ['bold', 'semi-bold'],
-      control: {
-        type: 'radio',
-        labels: {
-          some: 'some'
-        }
-      },
-    },
-    textType: {
-      table: {
-        disable: true,
-      },
-    },
-    children: {
-      description: "JSX element, should be a tag h1-h6",
+  parameters: {
+    options: {
+      order: ['H 1', 'Custom'],
+      includeName: true
     }
+  },
+  argTypes: {
+    ...headersArguments
   },
 } as ComponentMeta<Overload>;
 
@@ -60,7 +96,12 @@ H5.args = {
 };
 
 export const H6 = HeaderTemplate.bind({});
-
 H6.args = {
   children: <h6>Header 6</h6>,
 };
+
+export const Custom = HeaderTemplate.bind({});
+Custom.args = {
+  children: <h6 className={'storybook-test-header'}>Header 6</h6>,
+};
+

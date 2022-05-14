@@ -19,3 +19,10 @@
     --rem-base: 10px;
   }
 }
+
+h6.storybook-test-header {
+  color: darkblue;
+  border: 1px solid red;
+  width: 200px;
+  text-align: center;
+}
